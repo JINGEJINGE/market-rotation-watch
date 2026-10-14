@@ -151,6 +151,13 @@ def digest_markdown(out: dict, run: str) -> str:
         stale = [k for k, v in src.get("flows", {}).items() if isinstance(v, dict) and not v.get("ok", True)]
         if stale:
             parts += [f"_Data note: flow sources not updated this run: {', '.join(stale)} (showing last good data)._", ""]
+        prices = src.get("prices", {})
+        if isinstance(prices, dict):
+            bad = [k for k, v in prices.items() if isinstance(v, dict) and (v.get("error") or not v.get("updated", True))]
+            if prices.get("error"):
+                bad = ["all markets"]
+            if bad:
+                parts += [f"_Data note: prices not updated this run for {', '.join(bad)} (signals computed on the last stored close)._", ""]
     return "\n".join(parts)
 
 

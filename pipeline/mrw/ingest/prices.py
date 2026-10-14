@@ -68,15 +68,21 @@ def _download(tickers: list[str], start: dt.date | None, period: str | None) -> 
         frames.append(df)
         time.sleep(2.0)
     if not frames:
-        return pd.DataFrame(columns=["date", "ticker", "close", "volume"])
+        return _empty_prices()
     return pd.concat(frames, ignore_index=True)
+
+
+def _empty_prices() -> pd.DataFrame:
+    """Typed empty frame so concatenation never degrades the date column to object dtype."""
+    return pd.DataFrame({"date": pd.Series(dtype="datetime64[ns]"), "ticker": pd.Series(dtype="object"),
+                         "close": pd.Series(dtype="float64"), "volume": pd.Series(dtype="float64")})
 
 
 def _load_group(group: str) -> pd.DataFrame:
     d = PRICES_DIR / group
     files = sorted(d.glob("*.parquet")) if d.exists() else []
     if not files:
-        return pd.DataFrame(columns=["date", "ticker", "close", "volume"])
+        return _empty_prices()
     return pd.concat([pd.read_parquet(f) for f in files], ignore_index=True)
 
 
@@ -97,34 +103,50 @@ def update_prices(full: bool = False) -> dict:
     for group, tickers in ticker_groups().items():
         if not tickers:
             continue
-        existing = _load_group(group)
-        if full or existing.empty:
-            start = (pd.Timestamp.today() - pd.Timedelta(days=int(years * 365))).date()
-            new = _download(tickers, start, None)
-        else:
-            last = existing["date"].max()
-            start = (last - pd.Timedelta(days=7)).date()
-            missing = sorted(set(tickers) - set(existing["ticker"]))
-            new = _download(tickers, start, None)
-            if missing:  # new constituents: backfill their history
-                log.info("%s: backfilling %d new tickers", group, len(missing))
-                hist_start = (pd.Timestamp.today() - pd.Timedelta(days=int(years * 365))).date()
-                new = pd.concat([new, _download(missing, hist_start, None)], ignore_index=True)
-        if new.empty:
-            log.warning("%s: no new price data", group)
-            report[group] = {"tickers": len(tickers), "last_date": str(existing["date"].max().date()) if not existing.empty else None, "updated": False}
-            continue
-        merged = pd.concat([existing, new], ignore_index=True)
         try:
-            merged = _fill_gaps_from_intraday(group, tickers, merged)
+            report[group] = _update_group(group, tickers, full, years)
         except Exception as e:  # noqa: BLE001
-            log.warning("%s: intraday gap fill failed: %s", group, repr(e)[:120])
-        months = None if (full or existing.empty) else set(merged["date"].dt.strftime("%Y-%m")) & set(new["date"].dt.strftime("%Y-%m")) | {pd.Timestamp.today().strftime("%Y-%m")}
-        _save_group(group, merged, months)
-        got = new["ticker"].nunique()
-        report[group] = {"tickers": len(tickers), "with_data": int(got), "last_date": str(new["date"].max().date()), "updated": True}
-        log.info("%s: %d/%d tickers, last date %s", group, got, len(tickers), new["date"].max().date())
+            # one market's failure must not abandon the others; the digest's data note reports it
+            log.error("%s: price update failed: %s", group, repr(e)[:200])
+            report[group] = {"tickers": len(tickers), "updated": False, "error": repr(e)[:200]}
     return report
+
+
+def _update_group(group: str, tickers: list[str], full: bool, years: float) -> dict:
+    existing = _load_group(group)
+    if not existing.empty:
+        existing["date"] = pd.to_datetime(existing["date"])
+    if full or existing.empty:
+        start = (pd.Timestamp.today() - pd.Timedelta(days=int(years * 365))).date()
+        new = _download(tickers, start, None)
+    else:
+        last = existing["date"].max()
+        start = (last - pd.Timedelta(days=7)).date()
+        missing = sorted(set(tickers) - set(existing["ticker"]))
+        new = _download(tickers, start, None)
+        if missing:  # new constituents: backfill their history
+            log.info("%s: backfilling %d new tickers", group, len(missing))
+            hist_start = (pd.Timestamp.today() - pd.Timedelta(days=int(years * 365))).date()
+            hist = _download(missing, hist_start, None)
+            if hist.empty:
+                log.warning("%s: no history for new tickers %s (delisted or bad symbols?)", group, missing[:10])
+            else:
+                new = pd.concat([new, hist], ignore_index=True)
+    if new.empty:
+        log.warning("%s: no new price data", group)
+        return {"tickers": len(tickers), "last_date": str(existing["date"].max().date()) if not existing.empty else None, "updated": False}
+    new["date"] = pd.to_datetime(new["date"])
+    merged = pd.concat([existing, new], ignore_index=True)
+    merged["date"] = pd.to_datetime(merged["date"])
+    try:
+        merged = _fill_gaps_from_intraday(group, tickers, merged)
+    except Exception as e:  # noqa: BLE001
+        log.warning("%s: intraday gap fill failed: %s", group, repr(e)[:120])
+    months = None if (full or existing.empty) else set(merged["date"].dt.strftime("%Y-%m")) & set(new["date"].dt.strftime("%Y-%m")) | {pd.Timestamp.today().strftime("%Y-%m")}
+    _save_group(group, merged, months)
+    got = new["ticker"].nunique()
+    log.info("%s: %d/%d tickers, last date %s", group, got, len(tickers), new["date"].max().date())
+    return {"tickers": len(tickers), "with_data": int(got), "last_date": str(new["date"].max().date()), "updated": True}
 
 
 def _fill_gaps_from_intraday(group: str, tickers: list[str], merged: pd.DataFrame) -> pd.DataFrame:
