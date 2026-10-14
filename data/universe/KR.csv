@@ -1,0 +1,202 @@
+ticker,name,market,sector_local,sector,mcap_local,shares,source_index
+005930.KS,삼성전자,KR,Consumer Electronics,Information Technology,1513592780226560.0,5764191903.0,KOSPI200
+000660.KS,SK하이닉스,KR,Semiconductors,Information Technology,1037459215351808.0,711075500.0,KOSPI200
+402340.KS,SK스퀘어,KR,Semiconductors,Information Technology,114511688237056.0,131774099.0,KOSPI200
+009150.KS,삼성전기,KR,Electronic Components,Information Technology,103461953732608.0,72693696.0,KOSPI200
+373220.KS,LG에너지솔루션,KR,Electrical Equipment & Parts,Industrials,91026001756160.0,234000000.0,KOSPI200
+005380.KS,현대차,KR,Auto Manufacturers,Consumer Discretionary,79466642538496.0,202416066.0,KOSPI200
+105560.KS,KB금융,KR,Banks - Regional,Financials,56106755817472.0,351106111.0,KOSPI200
+207940.KS,삼성바이오로직스,KR,Biotechnology,Health Care,55864136302592.0,46553447.0,KOSPI200
+032830.KS,삼성생명,KR,Insurance - Life,Financials,44803907649536.0,179574779.0,KOSPI200
+028260.KS,삼성물산,KR,Engineering & Construction,Industrials,47699650936832.0,162167581.0,KOSPI200
+055550.KS,신한지주,KR,Banks - Regional,Financials,46144705003520.0,470864361.0,KOSPI200
+034020.KS,두산에너빌리티,KR,Specialty Industrial Machinery,Industrials,43972336549888.0,639132818.0,KOSPI200
+006400.KS,삼성SDI,KR,Electrical Equipment & Parts,Industrials,41589586001920.0,77254139.0,KOSPI200
+012450.KS,한화에어로스페이스,KR,Aerospace & Defense,Industrials,41982210605056.0,51448788.0,KOSPI200
+068270.KS,셀트리온,KR,Biotechnology,Health Care,40611415588864.0,228025902.0,KOSPI200
+000270.KS,기아,KR,Auto Manufacturers,Consumer Discretionary,40692285964288.0,388656043.0,KOSPI200
+329180.KS,HD현대중공업,KR,Aerospace & Defense,Industrials,36778937417728.0,104932774.0,KOSPI200
+034730.KS,SK,KR,Conglomerates,Industrials,27080047722496.0,54541888.0,KOSPI200
+086790.KS,하나금융지주,KR,Banks - Regional,Financials,32613794316288.0,267107251.0,KOSPI200
+012330.KS,현대모비스,KR,Auto Parts,Consumer Discretionary,30034060378112.0,88465568.0,KOSPI200
+066570.KS,LG전자,KR,Consumer Electronics,Information Technology,31127265869824.0,162296049.0,KOSPI200
+000810.KS,삼성화재,KR,Insurance - Property & Casualty,Financials,26015822774272.0,39828296.0,KOSPI200
+010120.KS,LS ELECTRIC,KR,Electrical Equipment & Parts,Industrials,26483791757312.0,148785350.0,KOSPI200
+035420.KS,NAVER,KR,Internet Content & Information,Communication Services,26215758954496.0,149804333.0,KOSPI200
+096770.KS,SK이노베이션,KR,Oil & Gas Refining & Marketing,Energy,25661532012544.0,169050707.0,KOSPI200
+005490.KS,POSCO홀딩스,KR,Steel,Materials,21703161806848.0,75620779.0,KOSPI200
+316140.KS,우리금융지주,KR,Banks - Regional,Financials,22751114952704.0,728035737.0,KOSPI200
+138040.KS,메리츠금융지주,KR,Capital Markets,Financials,21093211439104.0,160894071.0,KOSPI200
+042700.KS,한미반도체,KR,Semiconductor Equipment & Materials,Information Technology,21104791912448.0,94853002.0,KOSPI200
+010130.KS,고려아연,KR,Other Industrial Metals & Mining,Materials,20107726159872.0,20393232.0,KOSPI200
+011200.KS,HMM,KR,Marine Shipping,Industrials,20609748697088.0,943237970.0,KOSPI200
+042660.KS,한화오션,KR,Aerospace & Defense,Industrials,19576263802880.0,306357807.0,KOSPI200
+298040.KS,효성중공업,KR,Electrical Equipment & Parts,Industrials,19768826396672.0,9311741.0,KOSPI200
+267260.KS,HD현대일렉트릭,KR,Electrical Equipment & Parts,Industrials,19616023707648.0,35992704.0,KOSPI200
+009540.KS,HD한국조선해양,KR,Aerospace & Defense,Industrials,18810092388352.0,70714630.0,KOSPI200
+033780.KS,KT&G,KR,Tobacco,Consumer Staples,18717024976896.0,103810456.0,KOSPI200
+000150.KS,두산,KR,Conglomerates,Industrials,19234922954752.0,13604911.0,KOSPI200
+015760.KS,한국전력,KR,Utilities - Regulated Electric,Utilities,18263900000000.0,,KOSPI200
+051910.KS,LG화학,KR,Chemicals,Materials,19373087522816.0,70592341.0,KOSPI200
+010950.KS,S-Oil,KR,Oil & Gas Refining & Marketing,Energy,18126693466112.0,112582792.0,KOSPI200
+017670.KS,SK텔레콤,KR,Telecom Services,Communication Services,16682518052864.0,213058972.0,KOSPI200
+003550.KS,LG,KR,Consumer Electronics,Information Technology,15744146341888.0,151192004.0,KOSPI200
+024110.KS,기업은행,KR,Banks - Regional,Financials,15605624209408.0,797425867.0,KOSPI200
+010140.KS,삼성중공업,KR,Aerospace & Defense,Industrials,14973256335360.0,854035571.0,KOSPI200
+003670.KS,포스코퓨처엠,KR,Electrical Equipment & Parts,Industrials,15094167633920.0,88946185.0,KOSPI200
+018260.KS,삼성에스디에스,KR,Information Technology Services,Information Technology,15067815870464.0,77350186.0,KOSPI200
+006800.KS,미래에셋증권,KR,Capital Markets,Financials,15360309854208.0,436410071.0,KOSPI200
+272210.KS,한화시스템,KR,Aerospace & Defense,Industrials,13725305143296.0,186993261.0,KOSPI200
+035720.KS,카카오,KR,Internet Content & Information,Communication Services,13561161056256.0,442452229.0,KOSPI200
+086280.KS,현대글로비스,KR,Integrated Freight & Logistics,Industrials,13364999749632.0,75000000.0,KOSPI200
+267250.KS,HD현대,KR,Oil & Gas Refining & Marketing,Energy,11412951793664.0,70668430.0,KOSPI200
+005830.KS,DB손해보험,KR,Insurance - Property & Casualty,Financials,11698124619776.0,60643469.0,KOSPI200
+030200.KS,KT,KR,Telecom Services,Communication Services,11528539471872.0,236725661.0,KOSPI200
+079550.KS,LIG디펜스앤에어로스페이스,KR,Aerospace & Defense,Industrials,12036732878848.0,21845250.0,KOSPI200
+003490.KS,대한항공,KR,Airlines,Industrials,11135341297664.0,368220609.0,KOSPI200
+047810.KS,한국항공우주,KR,Aerospace & Defense,Industrials,10712513511424.0,97475107.0,KOSPI200
+000720.KS,현대건설,KR,Engineering & Construction,Industrials,10712716935168.0,111355765.0,KOSPI200
+278470.KS,에이피알,KR,Household & Personal Products,Consumer Staples,10819626598400.0,37438155.0,KOSPI200
+011070.KS,LG이노텍,KR,Electronic Components,Information Technology,10412383797248.0,23664507.0,KOSPI200
+064350.KS,현대로템,KR,Railroads,Industrials,10357604089856.0,109142293.0,KOSPI200
+443060.KS,HD현대마린솔루션,KR,Aerospace & Defense,Industrials,9885309730816.0,44831335.0,KOSPI200
+047050.KS,포스코인터내셔널,KR,Conglomerates,Industrials,9272180080640.0,170444487.0,KOSPI200
+323410.KS,카카오뱅크,KR,Banks - Regional,Financials,9445976309760.0,476588103.0,KOSPI200
+307950.KS,현대오토에버,KR,Information Technology Services,Information Technology,9241881477120.0,27423982.0,KOSPI200
+078930.KS,GS,KR,Conglomerates,Industrials,9353906094080.0,92895495.0,KOSPI200
+003230.KS,삼양식품,KR,Packaged Foods,Consumer Staples,8821158182912.0,7533013.0,KOSPI200
+005940.KS,NH투자증권,KR,Capital Markets,Financials,9219963092992.0,368522434.0,KOSPI200
+071050.KS,한국금융지주,KR,Capital Markets,Financials,9133254246400.0,52738513.0,KOSPI200
+028050.KS,삼성E&A,KR,Engineering & Construction,Industrials,8565200257024.0,196000000.0,KOSPI200
+180640.KS,한진칼,KR,Real Estate Services,Real Estate,8626908430336.0,66762276.0,KOSPI200
+259960.KS,크래프톤,KR,Electronic Gaming & Multimedia,Communication Services,8057198739456.0,43458459.0,KOSPI200
+007660.KS,이수페타시스,KR,Electronic Components,Information Technology,8361309896704.0,73409219.0,KOSPI200
+0126Z0.KS,삼성에피스홀딩스,KR,Biotechnology,Health Care,7687031488512.0,24836935.0,KOSPI200
+090430.KS,아모레퍼시픽,KR,Household & Personal Products,Consumer Staples,8932909121536.0,58375274.0,KOSPI200
+006260.KS,LS,KR,Electrical Equipment & Parts,Industrials,6563408904192.0,27347538.0,KOSPI200
+161390.KS,한국타이어앤테크놀로지,KR,Auto Parts,Consumer Discretionary,7343722987520.0,121988753.0,KOSPI200
+009830.KS,한화솔루션,KR,Solar,Information Technology,7109989629952.0,222455055.0,KOSPI200
+016360.KS,삼성증권,KR,Capital Markets,Financials,7072560185344.0,89300000.0,KOSPI200
+021240.KS,코웨이,KR,"Furnishings, Fixtures & Appliances",Consumer Discretionary,6970813710336.0,70128913.0,KOSPI200
+352820.KS,하이브,KR,Entertainment,Communication Services,6828910444544.0,42389265.0,KOSPI200
+047040.KS,대우건설,KR,Engineering & Construction,Industrials,6409817161728.0,410885720.0,KOSPI200
+062040.KS,산일전기,KR,Electrical Equipment & Parts,Industrials,6263794565120.0,30555097.0,KOSPI200
+032640.KS,LG유플러스,KR,Telecom Services,Communication Services,6205100000000.0,,KOSPI200
+064400.KS,LG씨엔에스,KR,Information Technology Services,Information Technology,6094126579712.0,96885948.0,KOSPI200
+039490.KS,키움증권,KR,Capital Markets,Financials,5940713619456.0,26228316.0,KOSPI200
+128940.KS,한미약품,KR,Drug Manufacturers - Specialty & Generic,Health Care,5767201030144.0,12689111.0,KOSPI200
+000880.KS,한화,KR,Conglomerates,Industrials,6909631397888.0,52472375.0,KOSPI200
+326030.KS,SK바이오팜,KR,Biotechnology,Health Care,5458433146880.0,78313250.0,KOSPI200
+000990.KS,DB하이텍,KR,Semiconductors,Information Technology,5281893842944.0,42768373.0,KOSPI200
+000100.KS,유한양행,KR,Drug Manufacturers - Specialty & Generic,Health Care,5315728769024.0,73615781.0,KOSPI200
+175330.KS,JB금융지주,KR,Banks - Regional,Financials,5180380676096.0,184027731.0,KOSPI200
+377300.KS,카카오페이,KR,Software - Infrastructure,Information Technology,4977940496384.0,135270125.0,KOSPI200
+241560.KS,두산밥캣,KR,Farm & Heavy Construction Machinery,Industrials,4883115147264.0,95747357.0,KOSPI200
+029780.KS,삼성카드,KR,Credit Services,Financials,4471178395648.0,106710695.0,KOSPI200
+011790.KS,SKC,KR,Specialty Chemicals,Materials,4636981329920.0,48554778.0,KOSPI200
+001440.KS,대한전선,KR,Electrical Equipment & Parts,Industrials,4737374617600.0,195355650.0,KOSPI200
+267270.KS,HD건설기계,KR,Farm & Heavy Construction Machinery,Industrials,4696253136896.0,47581085.0,KOSPI200
+138930.KS,BNK금융지주,KR,Banks - Regional,Financials,4608733216768.0,306839751.0,KOSPI200
+036570.KS,NC,KR,Electronic Gaming & Multimedia,Communication Services,3923703496704.0,19472474.0,KOSPI200
+066970.KS,엘앤에프,KR,Electrical Equipment & Parts,Industrials,4015465168896.0,39444649.0,KOSPI200
+088350.KS,한화생명,KR,Insurance - Life,Financials,3689326313472.0,751390250.0,KOSPI200
+271560.KS,오리온,KR,Confectioners,Consumer Staples,4182145761280.0,39528788.0,KOSPI200
+052690.KS,한전기술,KR,Engineering & Construction,Industrials,4063046139904.0,38043505.0,KOSPI200
+001450.KS,현대해상,KR,Insurance - Property & Casualty,Financials,3723534008320.0,79308500.0,KOSPI200
+010060.KS,OCI홀딩스,KR,Asset Management,Financials,1851404582912.0,8858395.0,KOSPI200
+454910.KS,두산로보틱스,KR,Specialty Industrial Machinery,Industrials,3934572773376.0,64819980.0,KOSPI200
+051900.KS,LG생활건강,KR,Household & Personal Products,Consumer Staples,4390083362816.0,14659784.0,KOSPI200
+018880.KS,한온시스템,KR,Auto Parts,Consumer Discretionary,3802261094400.0,1026251342.0,KOSPI200
+034220.KS,LG디스플레이,KR,Consumer Electronics,Information Technology,3700000030720.0,500000000.0,KOSPI200
+002380.KS,KCC,KR,Chemicals,Materials,3129199820800.0,7354171.0,KOSPI200
+001040.KS,CJ,KR,Conglomerates,Industrials,4167895351296.0,27058454.0,KOSPI200
+004020.KS,현대제철,KR,Steel,Materials,3512271110144.0,131545739.0,KOSPI200
+028670.KS,팬오션,KR,Marine Shipping,Industrials,3517467328512.0,534569512.0,KOSPI200
+008930.KS,한미사이언스,KR,Medical Distribution,Health Care,3414657597440.0,67751141.0,KOSPI200
+036460.KS,한국가스공사,KR,Utilities - Regulated Gas,Utilities,3111369048064.0,87275434.0,KOSPI200
+012750.KS,에스원,KR,Security & Protection Services,Industrials,2917823676416.0,33810239.0,KOSPI200
+111770.KS,영원무역,KR,Apparel Manufacturing,Consumer Discretionary,3094120235008.0,42560112.0,KOSPI200
+192820.KS,코스맥스,KR,Household & Personal Products,Consumer Staples,3199476695040.0,11345662.0,KOSPI200
+035250.KS,강원랜드,KR,Resorts & Casinos,Consumer Discretionary,2828225740800.0,198193804.0,KOSPI200
+022100.KS,포스코DX,KR,Information Technology Services,Information Technology,2910437507072.0,151822519.0,KOSPI200
+082740.KS,한화엔진,KR,Specialty Industrial Machinery,Industrials,2936578768896.0,83425535.0,KOSPI200
+161890.KS,한국콜마,KR,Household & Personal Products,Consumer Staples,2901063761920.0,23605077.0,KOSPI200
+011780.KS,금호석유화학,KR,Specialty Chemicals,Materials,2837438267392.0,22378826.0,KOSPI200
+302440.KS,SK바이오사이언스,KR,Biotechnology,Health Care,2796976078848.0,78456553.0,KOSPI200
+251270.KS,넷마블,KR,Electronic Gaming & Multimedia,Communication Services,2683971567616.0,80118554.0,KOSPI200
+383220.KS,F&F,KR,Apparel Manufacturing,Consumer Discretionary,2709918056448.0,37481574.0,KOSPI200
+004170.KS,신세계,KR,Department Stores,Consumer Discretionary,2560162791424.0,8767681.0,KOSPI200
+014680.KS,한솔케미칼,KR,Chemicals,Materials,2730030792704.0,10727036.0,KOSPI200
+097950.KS,CJ제일제당,KR,Packaged Foods,Consumer Staples,2900196065280.0,14696879.0,KOSPI200
+139130.KS,iM금융지주,KR,Banks - Regional,Financials,2717516038144.0,158363407.0,KOSPI200
+017800.KS,현대엘리베이터,KR,Specialty Industrial Machinery,Industrials,2494859837440.0,36105062.0,KOSPI200
+026960.KS,동서,KR,Food Distribution,Consumer Staples,2654382325760.0,98675920.0,KOSPI200
+023530.KS,롯데쇼핑,KR,Department Stores,Consumer Discretionary,2631996538880.0,28270640.0,KOSPI200
+000240.KS,한국앤컴퍼니,KR,Auto Parts,Consumer Discretionary,2510030897152.0,94718144.0,KOSPI200
+004370.KS,농심,KR,Packaged Foods,Consumer Staples,2345343647744.0,5834188.0,KOSPI200
+457190.KS,이수스페셜티케미컬,KR,,Unclassified,2394845609984.0,30218872.0,KOSPI200
+375500.KS,DL이앤씨,KR,Engineering & Construction,Industrials,2426138525696.0,37555669.0,KOSPI200
+011170.KS,롯데케미칼,KR,Chemicals,Materials,2323409797120.0,42167147.0,KOSPI200
+450080.KS,에코프로머티,KR,Electrical Equipment & Parts,Industrials,2258962481152.0,70813870.0,KOSPI200
+009970.KS,영원무역홀딩스,KR,Apparel Manufacturing,Consumer Discretionary,2026215178240.0,11604898.0,KOSPI200
+282330.KS,BGF리테일,KR,Grocery Stores,Consumer Staples,2244024467456.0,17275015.0,KOSPI200
+004990.KS,롯데지주,KR,Confectioners,Consumer Staples,1719805673472.0,76050761.0,KOSPI200
+112610.KS,씨에스윈드,KR,Specialty Industrial Machinery,Industrials,2147221766144.0,41612824.0,KOSPI200
+030000.KS,제일기획,KR,Advertising Agencies,Communication Services,1940500381696.0,101278725.0,KOSPI200
+007340.KS,DN오토모티브,KR,Auto Parts,Consumer Discretionary,1954025832448.0,51762270.0,KOSPI200
+009420.KS,한올바이오파마,KR,Drug Manufacturers - Specialty & Generic,Health Care,2095357624320.0,50858195.0,KOSPI200
+005850.KS,에스엘,KR,Auto Parts,Consumer Discretionary,2136973508608.0,46055462.0,KOSPI200
+483650.KS,달바글로벌,KR,Household & Personal Products,Consumer Staples,2027555651584.0,12385801.0,KOSPI200
+081660.KS,미스토홀딩스,KR,Leisure,Consumer Discretionary,1984514228224.0,52569910.0,KOSPI200
+139480.KS,이마트,KR,Discount Stores,Consumer Staples,1928761311232.0,26788353.0,KOSPI200
+204320.KS,HL만도,KR,Auto Parts,Consumer Discretionary,1911154802688.0,46957120.0,KOSPI200
+051600.KS,한전KPS,KR,Engineering & Construction,Industrials,1912499994624.0,45000000.0,KOSPI200
+002790.KS,아모레퍼시픽홀딩스,KR,Household & Personal Products,Consumer Staples,2045894983680.0,76281253.0,KOSPI200
+073240.KS,금호타이어,KR,Auto Parts,Consumer Discretionary,1864319238144.0,287260287.0,KOSPI200
+007070.KS,GS리테일,KR,Department Stores,Consumer Discretionary,1767412334592.0,83565590.0,KOSPI200
+069960.KS,현대백화점,KR,Department Stores,Consumer Discretionary,1747127762944.0,21332452.0,KOSPI200
+103140.KS,풍산,KR,Metal Fabrication,Industrials,1704411004928.0,27314278.0,KOSPI200
+000120.KS,CJ대한통운,KR,Integrated Freight & Logistics,Industrials,1368235835392.0,19945129.0,KOSPI200
+006040.KS,동원산업,KR,Packaged Foods,Consumer Staples,1527272308736.0,44140819.0,KOSPI200
+001430.KS,세아베스틸지주,KR,Steel,Materials,1509795299328.0,35862119.0,KOSPI200
+120110.KS,코오롱인더,KR,Chemicals,Materials,1654639165440.0,29932521.0,KOSPI200
+006280.KS,녹십자,KR,Drug Manufacturers - Specialty & Generic,Health Care,1428923482112.0,11413127.0,KOSPI200
+093370.KS,후성,KR,Specialty Chemicals,Materials,1465107742720.0,107255330.0,KOSPI200
+008770.KS,호텔신라,KR,Specialty Retail,Consumer Discretionary,1404262547456.0,37161352.0,KOSPI200
+361610.KS,SK아이이테크놀로지,KR,Electronic Components,Information Technology,1414098976768.0,81787100.0,KOSPI200
+001800.KS,오리온홀딩스,KR,Confectioners,Consumer Staples,1353524707328.0,60156652.0,KOSPI200
+071970.KS,HD현대마린엔진,KR,Specialty Industrial Machinery,Industrials,1300888420352.0,33921473.0,KOSPI200
+011210.KS,현대위아,KR,Auto Parts,Consumer Discretionary,1266052628480.0,26597745.0,KOSPI200
+007310.KS,오뚜기,KR,Packaged Foods,Consumer Staples,1067911020544.0,3439327.0,KOSPI200
+300720.KS,한일시멘트,KR,Building Materials,Materials,1233297342464.0,73541882.0,KOSPI200
+192080.KS,더블유게임즈,KR,Electronic Gaming & Multimedia,Communication Services,1116801073152.0,19456465.0,KOSPI200
+069620.KS,대웅제약,KR,Drug Manufacturers - Specialty & Generic,Health Care,1188597727232.0,11506270.0,KOSPI200
+298020.KS,효성티앤씨,KR,Textile Manufacturing,Consumer Discretionary,1118031314944.0,4291867.0,KOSPI200
+280360.KS,롯데웰푸드,KR,Confectioners,Consumer Staples,1045037776896.0,8841267.0,KOSPI200
+000080.KS,하이트진로,KR,Beverages - Wineries & Distilleries,Consumer Staples,1042552651776.0,68649427.0,KOSPI200
+004000.KS,롯데정밀화학,KR,Chemicals,Materials,1028988010496.0,25470000.0,KOSPI200
+003240.KS,태광산업,KR,Chemicals,Materials,748209963008.0,841631.0,KOSPI200
+000210.KS,DL,KR,Specialty Chemicals,Materials,1021058416640.0,20930727.0,KOSPI200
+009240.KS,한샘,KR,"Furnishings, Fixtures & Appliances",Consumer Discretionary,663623434240.0,16426322.0,KOSPI200
+017960.KS,한국카본,KR,Chemicals,Materials,929143259136.0,51676486.0,KOSPI200
+185750.KS,종근당,KR,Drug Manufacturers - Specialty & Generic,Health Care,849856364544.0,13176068.0,KOSPI200
+005300.KS,롯데칠성,KR,Beverages - Non-Alcoholic,Consumer Staples,957159243776.0,9278884.0,KOSPI200
+071320.KS,지역난방공사,KR,Utilities - Renewable,Utilities,881142398976.0,11578744.0,KOSPI200
+003090.KS,대웅,KR,Drug Manufacturers - Specialty & Generic,Health Care,632654987264.0,42036875.0,KOSPI200
+034230.KS,파라다이스,KR,Resorts & Casinos,Consumer Discretionary,824059035648.0,87759214.0,KOSPI200
+285130.KS,SK케미칼,KR,Specialty Chemicals,Materials,934112133120.0,17268857.0,KOSPI200
+137310.KS,에스디바이오센서,KR,Medical Devices,Health Care,781113491456.0,119619215.0,KOSPI200
+298050.KS,HS효성첨단소재,KR,Textile Manufacturing,Consumer Discretionary,677368168448.0,4479948.0,KOSPI200
+000670.KS,영풍,KR,Electronic Components,Information Technology,665447628800.0,18407957.0,KOSPI200
+268280.KS,미원에스씨,KR,Chemicals,Materials,617992093696.0,4794353.0,KOSPI200
+069260.KS,TKG휴켐스,KR,Chemicals,Materials,591295217664.0,38370877.0,KOSPI200
+0220W0.KS,한화머시너리앤서비스홀딩스,KR,Conglomerates,Industrials,631300000000.0,,KOSPI200
+002840.KS,미원상사,KR,Chemicals,Materials,613774721024.0,4460572.0,KOSPI200
+014820.KS,동원시스템즈,KR,Packaging & Containers,Consumer Discretionary,617288761344.0,28991282.0,KOSPI200
+456040.KS,OCI,KR,Specialty Chemicals,Materials,497931780096.0,7398689.0,KOSPI200
+001680.KS,대상,KR,Packaged Foods,Consumer Staples,631039721472.0,34648025.0,KOSPI200
+006650.KS,대한유화,KR,Chemicals,Materials,521262825472.0,6176100.0,KOSPI200
+002030.KS,아세아,KR,Building Materials,Materials,345432326144.0,1637120.0,KOSPI200
+003030.KS,세아제강지주,KR,Steel,Materials,395601379328.0,4065790.0,KOSPI200
+005420.KS,코스모화학,KR,Specialty Chemicals,Materials,398222065664.0,38364359.0,KOSPI200
+008730.KS,율촌화학,KR,Packaging & Containers,Consumer Discretionary,356127997952.0,24800000.0,KOSPI200

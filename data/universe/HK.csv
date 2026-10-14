@@ -1,0 +1,104 @@
+ticker,name,market,sector_local,sector,mcap_local,shares,source_index
+0005.HK,HSBC Holdings plc,HK,Banks - Diversified,Financials,2559820431360.0,17099669154.0,HSI
+0388.HK,HKEx Limited,HK,Financial Data & Stock Exchanges,Financials,477285908480.0,1263998743.0,HSI
+0939.HK,China Construction Bank,HK,Banks - Diversified,Financials,2593767817216.0,240417319880.0,HSI
+1299.HK,AIA Group Limited,HK,Insurance - Life,Financials,746462445568.0,10303140172.0,HSI
+1398.HK,Industrial and Commercial Bank of China,HK,Banks - Diversified,Financials,2708687552512.0,86794044550.0,HSI
+2318.HK,Ping An Insurance,HK,Insurance - Life,Financials,929827389440.0,7447576912.0,HSI
+2388.HK,BOC Hong Kong (Holdings) Ltd,HK,Banks - Regional,Financials,546084126720.0,10572780266.0,HSI
+2628.HK,China Life,HK,Insurance - Life,Financials,727533486080.0,7441175000.0,HSI
+3968.HK,China Merchants Bank,HK,Banks - Regional,Financials,1356827721728.0,4590901172.0,HSI
+3988.HK,Bank of China Ltd,HK,Banks - Diversified,Financials,2012216426496.0,83622276395.0,HSI
+0002.HK,CLP Holdings Limited,HK,Utilities - Regulated Electric,Utilities,195547283456.0,2526450570.0,HSI
+0003.HK,Hong Kong and China Gas Company Limited,HK,Utilities - Regulated Gas,Utilities,133511380992.0,18659870098.0,HSI
+0006.HK,Power Assets Holdings Limited,HK,Utilities - Independent Power Producers,Utilities,128612196352.0,2131105154.0,HSI
+0836.HK,China Resources Power,HK,Utilities - Independent Power Producers,Utilities,104576573440.0,5177057740.0,HSI
+1038.HK,Cheung Kong Infrastructure Holdings Limited,HK,Utilities - Regulated Electric,Utilities,169317842944.0,2519610945.0,HSI
+2688.HK,ENN Energy,HK,Utilities - Regulated Gas,Utilities,54903386112.0,1111854664.0,HSI
+0012.HK,Henderson Land Development Company Limited,HK,Real Estate - Diversified,Real Estate,130039660544.0,4841387003.0,HSI
+0016.HK,Sun Hung Kai Properties Limited,HK,Real Estate - Development,Real Estate,314119389184.0,2897780274.0,HSI
+0101.HK,Hang Lung Properties Limited,HK,Real Estate Services,Real Estate,33872070656.0,5203082528.0,HSI
+0688.HK,China Overseas Land & Investment Limited,HK,Real Estate - Development,Real Estate,142940192768.0,10944883535.0,HSI
+0823.HK,Link REIT,HK,REIT - Retail,Real Estate,96932085760.0,2588998106.0,HSI
+0960.HK,Longfor Properties,HK,Real Estate - Development,Real Estate,35320586240.0,6898551657.0,HSI
+1109.HK,China Resources Land Limited,HK,Real Estate - Development,Real Estate,217065799680.0,7130939579.0,HSI
+1113.HK,CK Asset Holdings,HK,Real Estate - Development,Real Estate,156440100864.0,3499778333.0,HSI
+1209.HK,China Resources Mixc Lifestyle,HK,Real Estate Services,Real Estate,86780657664.0,2282500000.0,HSI
+1997.HK,Wharf Real Estate Investment Company Limited,HK,Real Estate Services,Real Estate,93151453184.0,3036227327.0,HSI
+0001.HK,CK Hutchison Holdings Limited,HK,Conglomerates,Industrials,254314954752.0,3830044500.0,HSI
+0027.HK,Galaxy Entertainment Group Ltd.,HK,Resorts & Casinos,Consumer Discretionary,142237745152.0,4379240712.0,HSI
+0066.HK,MTR Corporation Ltd,HK,Railroads,Industrials,199080968192.0,6213513397.0,HSI
+0175.HK,Geely Auto,HK,Auto Manufacturers,Consumer Discretionary,163945398272.0,10785882097.0,HSI
+0241.HK,Alibaba Health,HK,Pharmaceutical Retailers,Health Care,45452595200.0,16175300965.0,HSI
+0267.HK,CITIC Limited,HK,Conglomerates,Industrials,374391668736.0,29090262630.0,HSI
+0285.HK,BYD Electronics,HK,Electronic Components,Information Technology,50537439232.0,2246108500.0,HSI
+0288.HK,WH Group,HK,Packaged Foods,Consumer Staples,84679442432.0,12830219550.0,HSI
+0291.HK,China Resources Beer,HK,Beverages - Brewers,Consumer Staples,62219919360.0,3244000000.0,HSI
+0300.HK,Midea Group,HK,"Furnishings, Fixtures & Appliances",Consumer Discretionary,717991903232.0,650848500.0,HSI
+0316.HK,Orient Overseas (International) Limited,HK,Marine Shipping,Industrials,106650288128.0,660373297.0,HSI
+0322.HK,Tingyi,HK,Packaged Foods,Consumer Staples,66859397120.0,5637386360.0,HSI
+0386.HK,Sinopec Corp,HK,Oil & Gas Integrated,Energy,542466310144.0,23643504600.0,HSI
+0669.HK,Techtronic Industries,HK,Tools & Accessories,Industrials,230359105536.0,1825349441.0,HSI
+0700.HK,Tencent Holdings Limited,HK,Internet Content & Information,Communication Services,3800328568832.0,9005517367.0,HSI
+0762.HK,China Unicom,HK,Telecom Services,Communication Services,171348803584.0,30598000000.0,HSI
+0857.HK,PetroChina Company Limited,HK,Oil & Gas Integrated,Energy,1835700322304.0,21098900000.0,HSI
+0868.HK,Xinyi Glass,HK,Building Materials,Materials,35707183104.0,4427425346.0,HSI
+0881.HK,Zhongsheng Group,HK,Auto & Truck Dealerships,Consumer Discretionary,5538765824.0,2366993863.0,HSI
+0883.HK,CNOOC Limited,HK,Oil & Gas E&P,Energy,1142620160000.0,44539953984.0,HSI
+0941.HK,China Mobile Ltd,HK,Telecom Services,Communication Services,1742284914688.0,20780928456.0,HSI
+0968.HK,Xinyi Solar,HK,Solar,Information Technology,17078792192.0,9133043615.0,HSI
+0981.HK,Semiconductor Manufacturing International Corporation,HK,Semiconductors,Information Technology,474353958912.0,6014569609.0,HSI
+0992.HK,Lenovo,HK,Computer Hardware,Information Technology,393971990528.0,12404659302.0,HSI
+1024.HK,Kuaishou,HK,Internet Content & Information,Communication Services,123502559232.0,3640879546.0,HSI
+1044.HK,Hengan International Group Co. Ltd,HK,Household & Personal Products,Consumer Staples,22602665984.0,1150262917.0,HSI
+1088.HK,China Shenhua Energy,HK,Thermal Coal,Energy,956070297600.0,3377482000.0,HSI
+1093.HK,CSPC Pharmaceutical Group,HK,Drug Manufacturers - General,Health Care,102078783488.0,11405451732.0,HSI
+1099.HK,Sinopharm Group,HK,Medical Distribution,Health Care,46092091392.0,1341810740.0,HSI
+1177.HK,Sino Biopharm,HK,Biotechnology,Health Care,95105146880.0,17809952537.0,HSI
+1211.HK,BYD Company,HK,Auto Manufacturers,Consumer Discretionary,658717474816.0,3683400000.0,HSI
+1378.HK,China Hongqiao Group,HK,Aluminum,Materials,206796521472.0,9819397841.0,HSI
+1810.HK,Xiaomi,HK,Consumer Electronics,Information Technology,631831396352.0,21317761689.0,HSI
+1876.HK,Budweiser Brewing Company APAC,HK,Beverages - Brewers,Consumer Staples,76137316352.0,13229769004.0,HSI
+1928.HK,Sands China,HK,Resorts & Casinos,Consumer Discretionary,,,HSI
+1929.HK,Chow Tai Fook,HK,Luxury Goods,Consumer Discretionary,104583110656.0,9866331200.0,HSI
+2015.HK,Li Auto,HK,Auto Manufacturers,Consumer Discretionary,87094706176.0,1609349787.0,HSI
+2020.HK,Anta Sports,HK,Leisure,Consumer Discretionary,197813682176.0,2770499587.0,HSI
+2057.HK,ZTO Express,HK,Integrated Freight & Logistics,Industrials,120994971648.0,541705790.0,HSI
+2269.HK,WuXi Biologics,HK,Biotechnology,Health Care,207257239552.0,4116330477.0,HSI
+2313.HK,Shenzhou International,HK,Textile Manufacturing,Consumer Discretionary,53110222848.0,1502835997.0,HSI
+2319.HK,Mengniu Dairy,HK,Packaged Foods,Consumer Staples,70117269504.0,3861083058.0,HSI
+2331.HK,Li-Ning,HK,Leisure,Consumer Discretionary,31948298240.0,2584813753.0,HSI
+2359.HK,WuXi AppTec,HK,Diagnostics & Research,Health Care,623369256960.0,561623820.0,HSI
+2382.HK,Sunny Optical,HK,Electronic Components,Information Technology,62785519616.0,1074174800.0,HSI
+2618.HK,JD Logistics,HK,Integrated Freight & Logistics,Industrials,63193796608.0,6123430016.0,HSI
+2899.HK,Zijin Mining,HK,Gold,Materials,865796423680.0,5989005101.0,HSI
+3690.HK,Meituan,HK,Internet Retail,Consumer Discretionary,437892087808.0,5592688176.0,HSI
+3692.HK,Hansoh Pharmaceutical Group,HK,Drug Manufacturers - Specialty & Generic,Health Care,191824756736.0,6062729070.0,HSI
+6618.HK,JD Health,HK,Pharmaceutical Retailers,Health Care,114057625600.0,3189531011.0,HSI
+6690.HK,Haier,HK,"Furnishings, Fixtures & Appliances",Consumer Discretionary,186619936768.0,2853587266.0,HSI
+6862.HK,Haidilao,HK,Restaurants,Consumer Discretionary,49470394368.0,5415478340.0,HSI
+9618.HK,JD.com,HK,Internet Retail,Consumer Discretionary,285456531456.0,2409875383.0,HSI
+9633.HK,Nongfu Spring,HK,Beverages - Non-Alcoholic,Consumer Staples,463804268544.0,5034666400.0,HSI
+9888.HK,Baidu,HK,Internet Content & Information,Communication Services,219232780288.0,2199368328.0,HSI
+9961.HK,Trip.com Group,HK,Travel Services,Consumer Discretionary,191304433664.0,629705222.0,HSI
+9988.HK,Alibaba Group,HK,Internet Retail,Consumer Discretionary,2119558758400.0,19901959514.0,HSI
+9992.HK,Pop Mart,HK,Leisure,Consumer Discretionary,197394694144.0,1322134510.0,HSI
+9999.HK,NetEase,HK,Electronic Gaming & Multimedia,Communication Services,625282711552.0,3201652151.0,HSI
+9868.HK,XPENG-W,HK,Auto Manufacturers,Consumer Discretionary,72039841792.0,1567245202.0,HSTECH_static
+9866.HK,NIO-SW,HK,Auto Manufacturers,Consumer Discretionary,66758139904.0,2357167022.0,HSTECH_static
+1347.HK,HUA HONG GRACE,HK,Semiconductors,Information Technology,198463979520.0,1928494794.0,HSTECH_static
+0020.HK,SENSETIME-W,HK,Software - Application,Information Technology,49604493312.0,41706746330.0,HSTECH_static
+3888.HK,KINGSOFT,HK,Electronic Gaming & Multimedia,Communication Services,34967556096.0,1356382924.0,HSTECH_static
+0268.HK,KINGDEE INT'L,HK,Software - Application,Information Technology,29214425088.0,3494548571.0,HSTECH_static
+9660.HK,HORIZONROBOT-W,HK,Software - Application,Information Technology,63097110528.0,13760720129.0,HSTECH_static
+9698.HK,GDS-SW,HK,Information Technology Services,Information Technology,47898263552.0,1559430567.0,HSTECH_static
+6060.HK,ZA ONLINE,HK,Insurance - Property & Casualty,Financials,15761424384.0,1634812900.0,HSTECH_static
+0780.HK,TONGCHENGTRAVEL,HK,Travel Services,Consumer Discretionary,23025149952.0,2354309962.0,HSTECH_static
+9626.HK,BILIBILI-W,HK,Internet Content & Information,Communication Services,48566571008.0,332230191.0,HSTECH_static
+0772.HK,CHINA LIT,HK,Internet Content & Information,Communication Services,21815283712.0,1009032517.0,HSTECH_static
+6969.HK,SMOORE INTL,HK,Tobacco,Consumer Staples,48511791104.0,6195631079.0,HSTECH_static
+2018.HK,AAC TECH,HK,Communication Equipment,Information Technology,40825131008.0,1129013595.0,HSTECH_static
+9880.HK,UBTECH ROBOTICS,HK,Specialty Industrial Machinery,Industrials,34231293952.0,432735396.0,HSTECH_static
+2013.HK,WEIMOB INC,HK,Software - Application,Information Technology,,,HSTECH_static
+0763.HK,ZTE,HK,Communication Equipment,Information Technology,96627408896.0,755502534.0,HSTECH_static
+9901.HK,NEW ORIENTAL-S,HK,Education & Training Services,Consumer Staples,70941532160.0,1550295803.0,HSTECH_static

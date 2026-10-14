@@ -1,0 +1,141 @@
+# Market definitions. Tickers are Yahoo Finance symbols.
+markets:
+  US:
+    name: United States
+    benchmark: SPY            # S&P 500 proxy (total-return-ish, adjusted)
+    benchmark_name: S&P 500
+    currency: USD
+    fx: null                  # already USD
+    calendar: XNYS
+    tz: America/New_York
+    session: us               # which run this market "belongs" to
+    sector_scheme: GICS
+    universe: sp500
+  KR:
+    name: Korea
+    benchmark: ^KS11
+    benchmark_name: KOSPI
+    currency: KRW
+    fx: KRW=X                 # USD/KRW: local price / fx = USD price
+    calendar: XKRX
+    tz: Asia/Seoul
+    session: asia
+    sector_scheme: YAHOO
+    universe: kospi200
+  HK:
+    name: Hong Kong
+    benchmark: ^HSI
+    benchmark_name: Hang Seng
+    currency: HKD
+    fx: HKD=X
+    calendar: XHKG
+    tz: Asia/Hong_Kong
+    session: asia
+    sector_scheme: YAHOO
+    universe: hk_core
+  JP:
+    name: Japan
+    benchmark: 1306.T         # TOPIX ETF as TOPIX proxy (^N225 is price-weighted and distorted)
+    benchmark_name: TOPIX (1306.T)
+    currency: JPY
+    fx: JPY=X
+    calendar: XTKS
+    tz: Asia/Tokyo
+    session: asia
+    sector_scheme: JPX17
+    universe: topix500
+  TW:
+    name: Taiwan
+    benchmark: ^TWII
+    benchmark_name: TAIEX
+    currency: TWD
+    fx: TWD=X
+    calendar: XTAI
+    tz: Asia/Taipei
+    session: asia
+    sector_scheme: YAHOO
+    universe: tw150
+
+# Reference tickers downloaded alongside (not part of any universe)
+reference:
+  - ACWI       # global benchmark for cross-market themes
+  - ^GSPC
+  - ^N225
+  - ^KQ11      # KOSDAQ
+  - XLK
+  - XLF
+  - XLV
+  - XLY
+  - XLP
+  - XLI
+  - XLE
+  - XLB
+  - XLRE
+  - XLU
+  - XLC
+  - SOXX
+
+# Harmonised 11-sector scheme (GICS names) and maps from each local scheme
+harmonised_sectors:
+  - Information Technology
+  - Communication Services
+  - Consumer Discretionary
+  - Consumer Staples
+  - Financials
+  - Health Care
+  - Industrials
+  - Energy
+  - Materials
+  - Real Estate
+  - Utilities
+
+sector_maps:
+  YAHOO:
+    Technology: Information Technology
+    Communication Services: Communication Services
+    Consumer Cyclical: Consumer Discretionary
+    Consumer Defensive: Consumer Staples
+    Financial Services: Financials
+    Healthcare: Health Care
+    Industrials: Industrials
+    Energy: Energy
+    Basic Materials: Materials
+    Real Estate: Real Estate
+    Utilities: Utilities
+  JPX17:
+    FOODS: Consumer Staples
+    ENERGY RESOURCES: Energy
+    CONSTRUCTION & MATERIALS: Industrials
+    RAW MATERIALS & CHEMICALS: Materials
+    PHARMACEUTICAL: Health Care
+    AUTOMOBILES & TRANSPORTATION EQUIPMENT: Consumer Discretionary
+    STEEL & NONFERROUS METALS: Materials
+    MACHINERY: Industrials
+    ELECTRIC APPLIANCES & PRECISION INSTRUMENTS: Information Technology
+    IT & SERVICES, OTHERS: Information Technology
+    ELECTRIC POWER & GAS: Utilities
+    TRANSPORTATION & LOGISTICS: Industrials
+    COMMERCIAL & WHOLESALE TRADE: Industrials
+    RETAIL TRADE: Consumer Discretionary
+    BANKS: Financials
+    FINANCIALS (EX BANKS): Financials
+    REAL ESTATE: Real Estate
+
+# Signal parameters
+params:
+  history_years: 1.5        # stateless runs rebuild this much history each time; 250d z-scores + 2y scorecard window
+  max_weight: 0.30          # single-name cap inside cap-weighted baskets (iteratively redistributed)
+  beta_window: 60
+  rrg_ratio_window: 63
+  rrg_mom_window: 21
+  rrg_trail_days: 10
+  turnover_baseline_days: 60
+  zscore_lookback_days: 250
+  corr_window: 20
+  leadlag_window: 60
+  composite_threshold: 1.5
+  composite_weights:
+    residual_5d_z: 0.35
+    turnover_share_z: 0.25
+    flow_z: 0.25
+    breadth_change_z: 0.15

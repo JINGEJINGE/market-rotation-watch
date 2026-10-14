@@ -1,0 +1,172 @@
+# Cross-market theme baskets — v2.1 (13 Oct 2026, after a post-cutoff web check of new listings and themes). Edit freely; this file is the theme registry.
+# Tickers are Yahoo Finance symbols. Members may sit outside the sector universes (KOSDAQ .KQ, TPEx .TWO).
+# Every ticker is validated on load; unresolved tickers are reported in data/outputs/universe_report.json.
+# A ticker may belong to several themes (e.g. COIN in both Fintech and Crypto) — overlap is intentional.
+# Cap-weighted baskets apply a 30% single-name cap (markets.yaml: params.max_weight) so SPCX / NVDA / TSMC do not become the basket.
+#
+# Still-private names cannot be members (nothing trades). Watch list for 2026-27 IPOs, add on listing:
+#   Anthropic (Nasdaq targeted Oct 2026) and OpenAI (S-1 filed Jun 2026) -> AI Compute / a new AI Software theme;
+#   Kraken -> Crypto; Anduril, Shield AI -> Defense / Space; Stripe, Revolut, Plaid -> Fintech; Databricks -> AI Software.
+
+themes:
+  # ---------------------------------------------------------------- AI hardware stack
+  ai_compute_hbm:
+    name: AI Compute & HBM
+    description: GPUs, custom silicon, HBM memory, advanced packaging and the foundry at the centre.
+    members:
+      US: [NVDA, AMD, AVGO, MU, MRVL, TSM, ARM, CBRS, SKHY]   # Cerebras (IPO May 2026), SK hynix Nasdaq ADR (Jul 2026)
+      KR: [005930.KS, 000660.KS]
+      JP: [6857.T, 8035.T, 6146.T, 6920.T]
+      TW: [2330.TW, 2454.TW, 3661.TW, 3443.TW, 3017.TW, 2382.TW, 6669.TW]
+      HK: [0981.HK]
+
+  ai_optics_interconnect:
+    name: AI Optics & Interconnect
+    description: Optical transceivers, lasers, fibre and cables, switching silicon and the networking layer of AI clusters.
+    members:
+      US: [COHR, LITE, AAOI, CIEN, CRDO, ALAB, ANET, FN, MRVL, POET]
+      JP: [5803.T, 5802.T, 5801.T, 6981.T]          # Fujikura, Sumitomo Electric, Furukawa Electric, Murata
+      TW: [2345.TW, 3081.TWO, 4979.TWO, 3105.TWO, 6442.TW, 2383.TW]   # Accton, LandMark, Luxnet, VPEC, Kinko Optical, Elite Material
+      HK: [6869.HK, 1888.HK, 0877.HK]               # YOFC, Kingboard Laminates, O-Net
+      KR: [042700.KS]                                # Hanmi Semiconductor (TC bonders / packaging interconnect)
+
+  memory_cycle:
+    name: Memory Cycle
+    description: DRAM / NAND pricing cycle names.
+    members:
+      US: [MU, WDC, STX, SNDK, SKHY]
+      KR: [000660.KS, 005930.KS]
+      TW: [2344.TW, 2408.TW, 2337.TW]
+      JP: [6723.T]
+
+  semicap:
+    name: Semicap Equipment
+    description: Wafer-fab equipment, test and inspection.
+    members:
+      US: [AMAT, LRCX, KLAC, ASML, TER, ONTO]
+      JP: [8035.T, 6857.T, 6146.T, 7735.T, 6920.T, 6525.T, 6323.T]
+      KR: [403870.KQ, 058470.KQ, 240810.KQ]
+      TW: [3583.TW, 3680.TWO]
+
+  # ---------------------------------------------------------------- Physical world
+  ai_power_nuclear:
+    name: AI Power & Nuclear
+    description: Power generation, grid equipment, cooling, nuclear fuel and reactors feeding data-centre demand.
+    members:
+      US: [VST, CEG, NRG, GEV, VRT, CCJ, ETN, PWR, OKLO, SMR, TLN, FRVO, STDN]   # Fervo geothermal (IPO May 2026), Standard Nuclear (2026)
+      KR: [034020.KS, 010120.KS, 267260.KS, 052690.KS, 298040.KS]
+      JP: [6501.T, 7011.T, 6503.T, 5802.T]
+      TW: [1513.TW, 1519.TW, 1503.TW, 3017.TW]
+      HK: [1816.HK, 0916.HK]
+
+  defense:
+    name: Defense
+    description: Prime contractors and the Korean / Japanese export champions.
+    members:
+      US: [LMT, RTX, NOC, GD, LHX, HII, PLTR, KTOS, AVAV]
+      KR: [012450.KS, 079550.KS, 047810.KS, 064350.KS]
+      JP: [7011.T, 7012.T, 7013.T]
+      HK: [2357.HK]
+
+  space_economy:
+    name: Space Economy
+    description: Launch, satellites, direct-to-device, lunar and in-space services. SpaceX (SPCX, Nasdaq, listed 12 Jun 2026)
+      is the anchor; its ~US$2tn market cap is held to the 30% single-name cap so the rest of the basket still registers.
+    members:
+      US: [SPCX, RKLB, ASTS, LUNR, PL, RDW, IRDM, VSAT, GSAT, KTOS, FLY]   # FLY = Firefly Aerospace (IPO May 2026)
+      JP: [9348.T, 7011.T]                            # ispace, MHI (H3 launcher)
+      KR: [012450.KS, 047810.KS, 189300.KQ, 099320.KQ]   # Hanwha Aerospace, KAI, Intellian, Satrec Initiative
+      HK: [1725.HK]                                   # Hong Kong Aerospace Technology
+
+  robotics_automation:
+    name: Robotics & Automation
+    description: Factory automation, humanoid and service robotics, machine vision.
+    members:
+      US: [TSLA, ISRG, ROK, SYM]
+      JP: [6954.T, 6273.T, 6506.T, 6861.T, 6645.T, 7751.T]
+      KR: [277810.KQ, 454910.KS, 056080.KQ]
+      TW: [1590.TW, 2049.TW]
+      HK: [9880.HK, 9660.HK, 0179.HK, 2590.HK, 0800.HK, 2026.HK]   # + Geek+, WeRide, Pony (autonomy & warehouse robotics)
+
+  ships:
+    name: Shipbuilding & Shipping
+    description: Korean yards, container lines, bulkers and tankers.
+    members:
+      KR: [009540.KS, 329180.KS, 042660.KS, 010140.KS, 011200.KS]
+      JP: [7012.T, 9101.T, 9104.T, 9107.T]
+      TW: [2603.TW, 2609.TW, 2615.TW]
+      HK: [0316.HK, 1919.HK, 1138.HK]
+      US: [ZIM, FRO, STNG]
+
+  metals:
+    name: Precious & Critical Metals
+    description: Gold, silver, copper and critical-minerals miners.
+    members:
+      US: [NEM, AEM, FCX, SCCO, WPM, MP, AA]
+      HK: [2899.HK, 1818.HK, 3993.HK, 2600.HK, 0358.HK]
+      JP: [5713.T, 5711.T]
+      KR: [010130.KS]
+      TW: [2002.TW]
+
+  # ---------------------------------------------------------------- Finance
+  fintech_trading:
+    name: Fintech & Trading Platforms
+    description: Exchanges and market infrastructure, retail brokers, payments and neobanks — the "activity" trade
+      (volumes, volatility, retail participation) rather than bank balance sheets.
+    members:
+      US: [CME, ICE, NDAQ, CBOE, HOOD, COIN, IBKR, SCHW, LPLA, PYPL, XYZ, SOFI, AFRM, FUTU, TIGR, MKTX, TW, VIRT]
+      HK: [0388.HK, 6060.HK]                          # HKEX, ZhongAn
+      JP: [8697.T, 8473.T, 8698.T, 7342.T]            # JPX, SBI, Monex, WealthNavi
+      KR: [039490.KS, 323410.KS, 377300.KS]           # Kiwoom, KakaoBank, Kakaopay
+
+  crypto_equities:
+    name: Crypto-linked Equities
+    description: Exchanges, treasuries, miners, stablecoin issuers.
+    members:
+      US: [COIN, MSTR, HOOD, MARA, RIOT, CLSK, CRCL, GLXY]
+      JP: [3350.T]
+      HK: [0863.HK, 1611.HK]
+
+  # ---------------------------------------------------------------- Health and China
+  biotech_glp1:
+    name: Biotech & GLP-1
+    description: Obesity franchises, large biotech, CDMOs and Asian innovators.
+    members:
+      US: [LLY, NVO, AMGN, VRTX, REGN, GILD]
+      KR: [207940.KS, 068270.KS, 326030.KS, 000100.KS, 196170.KQ]
+      JP: [4568.T, 4519.T, 4502.T, 4523.T]
+      HK: [1801.HK, 6160.HK, 2359.HK, 1177.HK, 9926.HK, 3692.HK, 2269.HK]
+
+  china_ai_semis:
+    name: China AI & Semis
+    description: Domestic AI compute, foundry, optics, platforms and the 2026 Hong Kong AI listings (Z.ai, MiniMax, Biren, Iluvatar).
+    members:
+      HK: [0981.HK, 1347.HK, 0020.HK, 3888.HK, 0268.HK, 9660.HK, 2382.HK, 0285.HK, 9698.HK, 6869.HK, 0700.HK, 9988.HK, 9888.HK,
+           2513.HK, 0100.HK, 6082.HK, 9903.HK]   # Z.ai (Jan 2026), MiniMax (Jan 2026), Biren (Jan 2026), Iluvatar CoreX (Jan 2026)
+
+  # ---------------------------------------------------------------- Added after the post-cutoff check (Oct 2026)
+  ai_software_agents:
+    name: AI Software & Agents
+    description: Agentic-AI winners and the "software disruption" debate — platforms, security and the listed model labs.
+      Add Anthropic and OpenAI here on listing.
+    members:
+      US: [MSFT, PLTR, NOW, CRM, SNOW, DDOG, MDB, APP, CRWD, PANW, ZS, ORCL]
+      HK: [2513.HK, 0100.HK, 0268.HK, 3888.HK, 9888.HK]
+      KR: [035420.KS, 035720.KS]
+      JP: [4385.T, 3923.T]                           # Mercari, Rakus (validated on load)
+
+  quantum:
+    name: Quantum Computing
+    description: Pure-play quantum names — a sentiment/liquidity theme that trades with risk appetite.
+    members:
+      US: [IONQ, RGTI, QBTS, QUBT, ARQQ]
+
+  energy_security:
+    name: Energy Security & Oil
+    description: Oil and gas producers, refiners and services — the Brent > $100 / US–Iran trade and the energy-importer stress it causes in Asia.
+    members:
+      US: [XOM, CVX, COP, OXY, FANG, SLB, HAL, VLO, EOG]
+      HK: [0883.HK, 0857.HK, 0386.HK]
+      JP: [1605.T, 5020.T]
+      KR: [096770.KS, 010950.KS]
+      TW: [6505.TW]

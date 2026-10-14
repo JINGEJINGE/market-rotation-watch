@@ -1,0 +1,151 @@
+ticker,name,market,sector_local,sector,mcap_local,shares,source_index
+2330.TW,台積電,TW,Semiconductors,Information Technology,64830924914688.0,25932370067.0,TWSE_TOP150_MCAP
+2454.TW,聯發科,TW,Semiconductors,Information Technology,7235128262656.0,1597158528.0,TWSE_TOP150_MCAP
+2308.TW,台達電,TW,Electronic Components,Information Technology,4623627190272.0,2597543329.0,TWSE_TOP150_MCAP
+2317.TW,鴻海,TW,Electronic Components,Information Technology,3380546895872.0,14027166000.0,TWSE_TOP150_MCAP
+3711.TW,日月光投控,TW,Semiconductors,Information Technology,3245452034048.0,4397631282.0,TWSE_TOP150_MCAP
+1303.TW,南亞,TW,Specialty Chemicals,Materials,2478381989888.0,7930822000.0,TWSE_TOP150_MCAP
+2881.TW,富邦金,TW,Insurance - Life,Financials,2193348493312.0,13665721905.0,TWSE_TOP150_MCAP
+2383.TW,台光電,TW,Electronic Components,Information Technology,1983306661888.0,358321000.0,TWSE_TOP150_MCAP
+3037.TW,欣興,TW,Electronic Components,Information Technology,1927457800192.0,1640389661.0,TWSE_TOP150_MCAP
+2303.TW,聯電,TW,Semiconductors,Information Technology,1768075558912.0,12539542899.0,TWSE_TOP150_MCAP
+2408.TW,南亞科,TW,Semiconductors,Information Technology,1688875827200.0,3450205900.0,TWSE_TOP150_MCAP
+2882.TW,國泰金,TW,Insurance - Life,Financials,1679624503296.0,14669210000.0,TWSE_TOP150_MCAP
+2891.TW,中信金,TW,Banks - Regional,Financials,1414699548672.0,19675932806.0,TWSE_TOP150_MCAP
+2382.TW,廣達,TW,Computer Hardware,Information Technology,1326194229248.0,4099518400.0,TWSE_TOP150_MCAP
+3017.TW,奇鋐,TW,Electronic Components,Information Technology,1301280063488.0,392543007.0,TWSE_TOP150_MCAP
+2327.TW,國巨*,TW,Electronic Components,Information Technology,1237134999552.0,2058460834.0,TWSE_TOP150_MCAP
+6669.TW,緯穎,TW,Computer Hardware,Information Technology,1233881137152.0,555802307.0,TWSE_TOP150_MCAP
+2412.TW,中華電,TW,Telecom Services,Communication Services,1140344619008.0,7757446545.0,TWSE_TOP150_MCAP
+2345.TW,智邦,TW,Communication Equipment,Information Technology,1137377804288.0,558908000.0,TWSE_TOP150_MCAP
+6505.TW,台塑化,TW,Oil & Gas Refining & Marketing,Energy,1119300222976.0,9525960000.0,TWSE_TOP150_MCAP
+7769.TW,鴻勁,TW,Semiconductor Equipment & Materials,Information Technology,1093074747392.0,179930000.0,TWSE_TOP150_MCAP
+2887.TW,台新新光金,TW,Banks - Regional,Financials,1089988395008.0,25114939479.0,TWSE_TOP150_MCAP
+3443.TW,創意,TW,Semiconductors,Information Technology,1058686894080.0,134011000.0,TWSE_TOP150_MCAP
+3653.TW,健策,TW,Electronic Components,Information Technology,1029691080704.0,147203878.0,TWSE_TOP150_MCAP
+2885.TW,元大金,TW,Financial Conglomerates,Financials,987144912896.0,13864396000.0,TWSE_TOP150_MCAP
+2059.TW,川湖,TW,"Furnishings, Fixtures & Appliances",Consumer Discretionary,967264567296.0,95297000.0,TWSE_TOP150_MCAP
+3008.TW,大立光,TW,Electronic Components,Information Technology,962020769792.0,130798197.0,TWSE_TOP150_MCAP
+2360.TW,致茂,TW,Scientific & Technical Instruments,Information Technology,927664635904.0,423591163.0,TWSE_TOP150_MCAP
+8046.TW,南電,TW,Electronic Components,Information Technology,924016640000.0,646165487.0,TWSE_TOP150_MCAP
+2884.TW,玉山金,TW,Banks - Regional,Financials,821917581312.0,17752000000.0,TWSE_TOP150_MCAP
+2886.TW,兆豐金,TW,Banks - Regional,Financials,747602313216.0,14833378282.0,TWSE_TOP150_MCAP
+2344.TW,華邦電,TW,Semiconductors,Information Technology,724500021248.0,4500000193.0,TWSE_TOP150_MCAP
+2357.TW,華碩,TW,Computer Hardware,Information Technology,722705711104.0,742760280.0,TWSE_TOP150_MCAP
+2880.TW,華南金,TW,Banks - Regional,Financials,694373056512.0,14056134650.0,TWSE_TOP150_MCAP
+2890.TW,永豐金,TW,Banks - Regional,Financials,670260199424.0,14894670432.0,TWSE_TOP150_MCAP
+2883.TW,凱基金,TW,Insurance - Life,Financials,661161181184.0,16974612849.0,TWSE_TOP150_MCAP
+2301.TW,光寶科,TW,Computer Hardware,Information Technology,631945363456.0,2269103542.0,TWSE_TOP150_MCAP
+2395.TW,研華,TW,Computer Hardware,Information Technology,625713152000.0,869046000.0,TWSE_TOP150_MCAP
+4958.TW,臻鼎-KY,TW,Electronic Components,Information Technology,606329241600.0,1108463000.0,TWSE_TOP150_MCAP
+2368.TW,金像電,TW,Electronic Components,Information Technology,606227726336.0,513752308.0,TWSE_TOP150_MCAP
+3231.TW,緯創,TW,Computer Hardware,Information Technology,597810348032.0,3179842250.0,TWSE_TOP150_MCAP
+2892.TW,第一金,TW,Banks - Regional,Financials,580930502656.0,14379468000.0,TWSE_TOP150_MCAP
+2603.TW,長榮,TW,Marine Shipping,Industrials,565076230144.0,2165043000.0,TWSE_TOP150_MCAP
+3189.TW,景碩,TW,Semiconductor Equipment & Materials,Information Technology,542717673472.0,526910360.0,TWSE_TOP150_MCAP
+1301.TW,台塑,TW,Specialty Chemicals,Materials,515625025536.0,6365741000.0,TWSE_TOP150_MCAP
+6446.TW,藥華藥,TW,Drug Manufacturers - Specialty & Generic,Health Care,486115016704.0,413714926.0,TWSE_TOP150_MCAP
+1326.TW,台化,TW,Chemicals,Materials,451544055808.0,5849016390.0,TWSE_TOP150_MCAP
+3665.TW,貿聯-KY,TW,Electrical Equipment & Parts,Industrials,436976975872.0,195079000.0,TWSE_TOP150_MCAP
+5880.TW,合庫金,TW,Banks - Regional,Financials,436380827648.0,16072959000.0,TWSE_TOP150_MCAP
+1216.TW,統一,TW,Packaged Foods,Consumer Staples,433537777664.0,5682015000.0,TWSE_TOP150_MCAP
+3481.TW,群創,TW,Electronic Components,Information Technology,399850733568.0,7981052800.0,TWSE_TOP150_MCAP
+2449.TW,京元電子,TW,Semiconductors,Information Technology,388374364160.0,1283882250.0,TWSE_TOP150_MCAP
+4904.TW,遠傳,TW,Telecom Services,Communication Services,386024439808.0,3607705000.0,TWSE_TOP150_MCAP
+2379.TW,瑞昱,TW,Semiconductors,Information Technology,380544352256.0,512863000.0,TWSE_TOP150_MCAP
+3045.TW,台灣大,TW,Specialty Retail,Consumer Discretionary,375823073280.0,3030831015.0,TWSE_TOP150_MCAP
+3661.TW,世芯-KY,TW,Semiconductors,Information Technology,342631284736.0,86305114.0,TWSE_TOP150_MCAP
+2801.TW,彰銀,TW,Banks - Regional,Financials,342509617152.0,12060197409.0,TWSE_TOP150_MCAP
+2615.TW,萬海,TW,Marine Shipping,Industrials,339543687168.0,2806146400.0,TWSE_TOP150_MCAP
+3034.TW,聯詠,TW,Semiconductors,Information Technology,325935890432.0,611512000.0,TWSE_TOP150_MCAP
+6770.TW,力積電,TW,Semiconductors,Information Technology,322254503936.0,4760037141.0,TWSE_TOP150_MCAP
+3044.TW,健鼎,TW,Electronic Components,Information Technology,299069833216.0,525606000.0,TWSE_TOP150_MCAP
+2313.TW,華通,TW,Electronic Components,Information Technology,297967648768.0,1233820600.0,TWSE_TOP150_MCAP
+2002.TW,中鋼,TW,Steel,Materials,291117924352.0,15241738000.0,TWSE_TOP150_MCAP
+4938.TW,和碩,TW,Computer Hardware,Information Technology,276935835648.0,2675708703.0,TWSE_TOP150_MCAP
+6213.TW,聯茂,TW,Electronic Components,Information Technology,275579994112.0,363562000.0,TWSE_TOP150_MCAP
+3036.TW,文曄,TW,Electronic Components,Information Technology,268724011008.0,1270562701.0,TWSE_TOP150_MCAP
+2409.TW,友達,TW,Electronic Components,Information Technology,255846678528.0,7547098972.0,TWSE_TOP150_MCAP
+5876.TW,上海商銀,TW,Banks - Regional,Financials,253270507520.0,4898849171.0,TWSE_TOP150_MCAP
+2376.TW,技嘉,TW,Computer Hardware,Information Technology,243465666560.0,689704454.0,TWSE_TOP150_MCAP
+1519.TW,華城,TW,Electrical Equipment & Parts,Industrials,238016331776.0,347469100.0,TWSE_TOP150_MCAP
+1590.TW,亞德客-KY,TW,Specialty Industrial Machinery,Industrials,235000004608.0,199999998.0,TWSE_TOP150_MCAP
+2618.TW,長榮航,TW,Airlines,Industrials,231409041408.0,5400444335.0,TWSE_TOP150_MCAP
+2609.TW,陽明,TW,Marine Shipping,Industrials,224542310400.0,3492104270.0,TWSE_TOP150_MCAP
+2912.TW,統一超,TW,Grocery Stores,Consumer Staples,224038600704.0,1039622255.0,TWSE_TOP150_MCAP
+3533.TW,嘉澤,TW,Electronic Components,Information Technology,214956670976.0,113733691.0,TWSE_TOP150_MCAP
+6239.TW,力成,TW,Semiconductors,Information Technology,214266314752.0,728797000.0,TWSE_TOP150_MCAP
+2404.TW,漢唐,TW,Engineering & Construction,Industrials,213441970176.0,188886700.0,TWSE_TOP150_MCAP
+6515.TW,穎崴,TW,Semiconductor Equipment & Materials,Information Technology,209921949696.0,36444782.0,TWSE_TOP150_MCAP
+2337.TW,旺宏,TW,Semiconductors,Information Technology,209811324928.0,1979352000.0,TWSE_TOP150_MCAP
+2356.TW,英業達,TW,Computer Hardware,Information Technology,205562314752.0,3587475066.0,TWSE_TOP150_MCAP
+3702.TW,大聯大,TW,Electronics & Computer Distribution,Information Technology,202229825536.0,1728460000.0,TWSE_TOP150_MCAP
+1101.TW,台泥,TW,Building Materials,Materials,197820006400.0,7493182000.0,TWSE_TOP150_MCAP
+2492.TW,華新科,TW,Electronic Components,Information Technology,189957668864.0,485204774.0,TWSE_TOP150_MCAP
+5871.TW,中租-KY,TW,Credit Services,Financials,185038848000.0,1745649585.0,TWSE_TOP150_MCAP
+2834.TW,臺企銀,TW,Banks - Regional,Financials,184570298368.0,10398326340.0,TWSE_TOP150_MCAP
+1802.TW,台玻,TW,Building Materials,Materials,180590575616.0,2908061000.0,TWSE_TOP150_MCAP
+3532.TW,台勝科,TW,Semiconductor Equipment & Materials,Information Technology,174531723264.0,387848300.0,TWSE_TOP150_MCAP
+1605.TW,華新,TW,Steel,Materials,173043548160.0,4431333000.0,TWSE_TOP150_MCAP
+6139.TW,亞翔,TW,Engineering & Construction,Industrials,170085875712.0,235576000.0,TWSE_TOP150_MCAP
+2347.TW,聯強,TW,Electronics & Computer Distribution,Information Technology,166794706944.0,1667946968.0,TWSE_TOP150_MCAP
+6415.TW,矽力*-KY,TW,Semiconductors,Information Technology,164875780096.0,388858000.0,TWSE_TOP150_MCAP
+1504.TW,東元,TW,Specialty Industrial Machinery,Industrials,164411211776.0,2345381000.0,TWSE_TOP150_MCAP
+8996.TW,高力,TW,Specialty Industrial Machinery,Industrials,161823473664.0,93002000.0,TWSE_TOP150_MCAP
+1402.TW,遠東新,TW,Textile Manufacturing,Consumer Discretionary,153605144576.0,5352096000.0,TWSE_TOP150_MCAP
+2324.TW,仁寶,TW,Computer Hardware,Information Technology,152618090496.0,4257129600.0,TWSE_TOP150_MCAP
+6531.TW,愛普*,TW,Semiconductors,Information Technology,150912811008.0,163149000.0,TWSE_TOP150_MCAP
+6805.TW,富世達,TW,Electronic Components,Information Technology,150476029952.0,68554000.0,TWSE_TOP150_MCAP
+6789.TW,采鈺,TW,Semiconductors,Information Technology,145144397824.0,318299119.0,TWSE_TOP150_MCAP
+6196.TW,帆宣,TW,Semiconductor Equipment & Materials,Information Technology,141451558912.0,220329529.0,TWSE_TOP150_MCAP
+1560.TW,中砂,TW,Tools & Accessories,Industrials,141422379008.0,150289456.0,TWSE_TOP150_MCAP
+3026.TW,禾伸堂,TW,Electronic Components,Information Technology,135920943104.0,167390318.0,TWSE_TOP150_MCAP
+7750.TW,新代,TW,Electrical Equipment & Parts,Industrials,133382463488.0,71711000.0,TWSE_TOP150_MCAP
+3406.TW,玉晶光,TW,Computer Hardware,Information Technology,132473102336.0,112743063.0,TWSE_TOP150_MCAP
+6257.TW,矽格,TW,Semiconductors,Information Technology,131553533952.0,475781325.0,TWSE_TOP150_MCAP
+1102.TW,亞泥,TW,Building Materials,Materials,130690842624.0,3546563000.0,TWSE_TOP150_MCAP
+2377.TW,微星,TW,Computer Hardware,Information Technology,130530279424.0,844856199.0,TWSE_TOP150_MCAP
+6442.TW,光聖,TW,Electronic Components,Information Technology,130406252544.0,80250000.0,TWSE_TOP150_MCAP
+6526.TW,達發,TW,Semiconductors,Information Technology,126634196992.0,167505554.0,TWSE_TOP150_MCAP
+3706.TW,神達,TW,Computer Hardware,Information Technology,120298496000.0,1459933200.0,TWSE_TOP150_MCAP
+2812.TW,台中銀,TW,Banks - Regional,Financials,119506395136.0,6425074858.0,TWSE_TOP150_MCAP
+6285.TW,啟碁,TW,Communication Equipment,Information Technology,119410008064.0,483441359.0,TWSE_TOP150_MCAP
+2451.TW,創見,TW,Computer Hardware,Information Technology,119051403264.0,431345675.0,TWSE_TOP150_MCAP
+6919.TW,康霈*,TW,Biotechnology,Health Care,118901317632.0,1556299860.0,TWSE_TOP150_MCAP
+2049.TW,上銀,TW,Tools & Accessories,Industrials,116220755968.0,353792240.0,TWSE_TOP150_MCAP
+5434.TW,崇越,TW,Electronics & Computer Distribution,Information Technology,116210794496.0,194008000.0,TWSE_TOP150_MCAP
+2027.TW,大成鋼,TW,Steel,Materials,114505342976.0,2341622615.0,TWSE_TOP150_MCAP
+5269.TW,祥碩,TW,Semiconductors,Information Technology,113088446464.0,74156359.0,TWSE_TOP150_MCAP
+8464.TW,億豐,TW,"Furnishings, Fixtures & Appliances",Consumer Discretionary,109443039232.0,293020200.0,TWSE_TOP150_MCAP
+8210.TW,勤誠,TW,Computer Hardware,Information Technology,105520078848.0,125619146.0,TWSE_TOP150_MCAP
+1503.TW,士電,TW,Electrical Equipment & Parts,Industrials,103673430016.0,520972000.0,TWSE_TOP150_MCAP
+2474.TW,可成,TW,Metal Fabrication,Industrials,99055173632.0,506676068.0,TWSE_TOP150_MCAP
+6691.TW,洋基工程,TW,Engineering & Construction,Industrials,95910797312.0,132656700.0,TWSE_TOP150_MCAP
+2353.TW,宏碁,TW,Computer Hardware,Information Technology,94545240064.0,3006208000.0,TWSE_TOP150_MCAP
+2455.TW,全新,TW,Semiconductor Equipment & Materials,Information Technology,94302019584.0,184905918.0,TWSE_TOP150_MCAP
+2855.TW,統一證,TW,Capital Markets,Financials,93842915328.0,1601415000.0,TWSE_TOP150_MCAP
+9105.TW,泰金寶-DR,TW,Computer Hardware,Information Technology,92796026880.0,10450002831.0,TWSE_TOP150_MCAP
+7610.TW,聯友金屬-創,TW,Other Industrial Metals & Mining,Materials,91248041984.0,58305456.0,TWSE_TOP150_MCAP
+2467.TW,志聖,TW,Specialty Industrial Machinery,Industrials,89269035008.0,157998285.0,TWSE_TOP150_MCAP
+3167.TW,大量,TW,Specialty Industrial Machinery,Industrials,88237498368.0,90314734.0,TWSE_TOP150_MCAP
+2354.TW,鴻準,TW,Electronics & Computer Distribution,Information Technology,87388078080.0,1409485192.0,TWSE_TOP150_MCAP
+1717.TW,長興,TW,Specialty Chemicals,Materials,86568345600.0,1184245483.0,TWSE_TOP150_MCAP
+1476.TW,儒鴻,TW,Apparel Manufacturing,Consumer Discretionary,85328166912.0,274367100.0,TWSE_TOP150_MCAP
+6781.TW,AES-KY,TW,Electrical Equipment & Parts,Industrials,84650229760.0,85419000.0,TWSE_TOP150_MCAP
+2542.TW,興富發,TW,Real Estate - Development,Real Estate,83738370048.0,2111938539.0,TWSE_TOP150_MCAP
+9945.TW,潤泰新,TW,Engineering & Construction,Industrials,82473771008.0,2819616000.0,TWSE_TOP150_MCAP
+1513.TW,中興電,TW,Specialty Industrial Machinery,Industrials,82263318528.0,494074000.0,TWSE_TOP150_MCAP
+6944.TW,兆聯實業,TW,Pollution & Treatment Controls,Industrials,81151148032.0,99694286.0,TWSE_TOP150_MCAP
+8150.TW,南茂,TW,Semiconductors,Information Technology,80320790528.0,695418126.0,TWSE_TOP150_MCAP
+6005.TW,群益證,TW,Capital Markets,Financials,79183331328.0,2455296948.0,TWSE_TOP150_MCAP
+8021.TW,尖點,TW,Tools & Accessories,Industrials,78301274112.0,148297876.0,TWSE_TOP150_MCAP
+2637.TW,慧洋-KY,TW,Marine Shipping,Industrials,77999742976.0,746409000.0,TWSE_TOP150_MCAP
+3023.TW,信邦,TW,Electronic Components,Information Technology,76942114816.0,240069014.0,TWSE_TOP150_MCAP
+6409.TW,旭隼,TW,Electrical Equipment & Parts,Industrials,76074082304.0,88253000.0,TWSE_TOP150_MCAP
+9904.TW,寶成,TW,Footwear & Accessories,Consumer Discretionary,76027101184.0,2946787000.0,TWSE_TOP150_MCAP
+2385.TW,群光,TW,Computer Hardware,Information Technology,74959077376.0,727758016.0,TWSE_TOP150_MCAP
+7799.TW,禾榮科,TW,Medical Devices,Health Care,74296025088.0,158245000.0,TWSE_TOP150_MCAP
+3005.TW,神基,TW,Computer Hardware,Information Technology,74011541504.0,624570000.0,TWSE_TOP150_MCAP
+6278.TW,台表科,TW,Electronic Components,Information Technology,73963151360.0,285572000.0,TWSE_TOP150_MCAP
+8039.TW,台虹,TW,Electronic Components,Information Technology,73865199616.0,263804290.0,TWSE_TOP150_MCAP
+3030.TW,德律,TW,Scientific & Technical Instruments,Information Technology,72636416000.0,236216000.0,TWSE_TOP150_MCAP
