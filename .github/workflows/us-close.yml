@@ -6,6 +6,7 @@ name: US-close run
 on:
   schedule:
     - cron: "37 21 * * 1-5"   # 05:37 Singapore Tue-Sat (after Mon-Fri US sessions); ~55 min before the Claude task
+    - cron: "7 22 * * 1-5"    # 06:07 backup in case GitHub drops or delays the first (same outputs if both run)
   workflow_dispatch:
 
 concurrency:
