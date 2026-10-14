@@ -517,7 +517,6 @@ FIS,Fidelity National Information S,Technology,Information Technology Services,1
 FITB,Fifth Third Bancorp,Financial Services,Banks - Regional,46088278016.0,906892564.0,USD,2026-10-13
 FSLR,"First Solar, Inc.",Technology,Solar,19314470912.0,107469788.0,USD,2026-10-13
 FE,FirstEnergy Corp.,Utilities,Utilities - Regulated Electric,26247108608.0,578639932.0,USD,2026-10-13
-FISV,"Fiserv, Inc.",,,24487856128.0,531766721.0,USD,2026-10-13
 FLEX,Flex Ltd.,Technology,Electronic Components,43315544064.0,369460443.0,USD,2026-10-13
 FTNT,"Fortinet, Inc.",Technology,Software - Infrastructure,141562707968.0,733713653.0,USD,2026-10-13
 F,Ford Motor Company,Consumer Cyclical,Auto Manufacturers,47851151360.0,3916743591.0,USD,2026-10-13
@@ -1204,8 +1203,6 @@ IRDM,Iridium Communications Inc,Communication Services,Telecom Services,49885516
 VSAT,"ViaSat, Inc.",Technology,Communication Equipment,9320558592.0,137755810.0,USD,2026-10-13
 GSAT,"Globalstar, Inc.",Communication Services,Telecom Services,10758943744.0,129563390.0,USD,2026-10-13
 9348.T,ISPACE INC,Technology,Computer Hardware,57793032192.0,146311471.0,JPY,2026-10-13
-189300.KQ,Intellian Tech,,,617363734528.0,10221254.0,KRW,2026-10-13
-099320.KQ,SI,,,661457207296.0,10951278.0,KRW,2026-10-13
 1725.HK,C STRATEGIC TEC,Technology,Electronic Components,189871104.0,818410000.0,HKD,2026-10-13
 SYM,Symbotic Inc.,Industrials,Specialty Industrial Machinery,24686776320.0,129873381.0,USD,2026-10-13
 6954.T,FANUC CORPORATION,Industrials,Specialty Industrial Machinery,5727064686592.0,924913533.0,JPY,2026-10-13
@@ -1215,7 +1212,6 @@ SYM,Symbotic Inc.,Industrials,Specialty Industrial Machinery,24686776320.0,12987
 6645.T,OMRON CORP,Technology,Electronic Components,1277697851392.0,196629396.0,JPY,2026-10-13
 7751.T,CANON INC,Technology,Computer Hardware,3936490881024.0,834709720.0,JPY,2026-10-13
 277810.KQ,Rainbow Robotics,Industrials,Specialty Industrial Machinery,7439845425152.0,19399858.0,KRW,2026-10-13
-056080.KQ,Yujin Robot,,,385796079616.0,38235486.0,KRW,2026-10-13
 0179.HK,JOHNSON ELEC H,Consumer Cyclical,Auto Parts,12436622336.0,926723034.0,HKD,2026-10-13
 9101.T,NIPPON YUSEN KABUSHIKI KAISHA,Industrials,Marine Shipping,3049673719808.0,403556142.0,JPY,2026-10-13
 9104.T,MITSUI O.S.K. LINES LTD,Industrials,Marine Shipping,2596737646592.0,343620164.0,JPY,2026-10-13
@@ -1290,3 +1286,7 @@ QBTS,D-Wave Quantum Inc.,Technology,Computer Hardware,5216069632.0,376450532.0,U
 QUBT,Quantum Computing Inc.,Technology,Computer Hardware,1568583680.0,226346861.0,USD,2026-10-13
 ARQQ,Arqit Quantum Inc.,Technology,Software - Infrastructure,289837184.0,17402411.0,USD,2026-10-13
 5020.T,ENEOS HOLDINGS INC,Energy,Oil & Gas Refining & Marketing,3697083678720.0,2650239110.0,JPY,2026-10-13
+FISV,"Fiserv, Inc.",,,24812234752.0,531766721.0,USD,2026-10-14
+189300.KQ,Intellian Tech,,,623496462336.0,10221254.0,KRW,2026-10-14
+099320.KQ,SI,,,662552313856.0,10951278.0,KRW,2026-10-14
+056080.KQ,Yujin Robot,,,386943123456.0,38235486.0,KRW,2026-10-14

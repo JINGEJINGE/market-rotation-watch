@@ -197,7 +197,7 @@ FIS,Fidelity National Information Services,US,Financials,Financials,17668083712.
 FITB,Fifth Third Bancorp,US,Financials,Financials,46088278016.0,906892564.0,SP500
 FSLR,First Solar,US,Information Technology,Information Technology,19314470912.0,107469788.0,SP500
 FE,FirstEnergy,US,Utilities,Utilities,26247108608.0,578639932.0,SP500
-FISV,Fiserv,US,Financials,Financials,24487856128.0,531766721.0,SP500
+FISV,Fiserv,US,Financials,Financials,24812234752.0,531766721.0,SP500
 FLEX,Flex Ltd.,US,Information Technology,Information Technology,43315544064.0,369460443.0,SP500
 F,Ford Motor Company,US,Consumer Discretionary,Consumer Discretionary,47851151360.0,3916743591.0,SP500
 FTNT,Fortinet,US,Information Technology,Information Technology,141562707968.0,733713653.0,SP500
@@ -305,7 +305,7 @@ MAS,Masco,US,Industrials,Industrials,13601989632.0,197187430.0,SP500
 MA,Mastercard,US,Financials,Financials,521304768512.0,869464115.0,SP500
 MKC,McCormick & Company,US,Consumer Staples,Consumer Staples,12263959552.0,254541615.0,SP500
 MCD,McDonald's,US,Consumer Discretionary,Consumer Discretionary,166755729408.0,707641531.0,SP500
-MCK,McKesson Corporation,US,Health Care,Health Care,111432400896.0,116590363.0,SP500
+MCK,McKesson,US,Health Care,Health Care,111432400896.0,116590363.0,SP500
 MDT,Medtronic,US,Health Care,Health Care,117591146496.0,1279137890.0,SP500
 MRK,Merck & Co.,US,Health Care,Health Care,358850101248.0,2467171638.0,SP500
 META,Meta Platforms,US,Communication Services,Communication Services,1892695277568.0,2205128509.0,SP500
