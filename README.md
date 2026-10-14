@@ -3,10 +3,10 @@
 Daily monitor of capital rotation — sector to sector, theme to theme, market to market — across the
 US, Korea, Hong Kong, Japan and Taiwan. Free data only. See `DESIGN.md` for the full design.
 
-Two runs a day (Singapore time): **18:00** after the Asia close and **06:30** after the US close.
-Each run updates prices and investor flows, recomputes every signal, writes `data/outputs/latest.json`,
-archives a Markdown digest under `digests/`, pushes a Telegram summary, and the Vercel dashboard
-redeploys from the commit.
+Two runs a day (Singapore time): **17:17** after the Asia close and **05:37** after the US close, on
+GitHub Actions. Each run updates prices and investor flows, recomputes every signal, writes
+`data/outputs/latest.json`, archives a Markdown digest under `digests/` and commits the results. A Claude
+scheduled task then reads the digest from the repo and delivers the memo (18:00 / 06:30).
 
 ```
 pipeline/      Python pipeline (run.py is the entry point; config/ holds the editable registries)
@@ -18,11 +18,11 @@ site/          Next.js dashboard (static export) — reads site/public/data/late
 
 ## Two ways to run it
 
-**Subscription-only (current choice)** — two daily memos in the Claude app, no API key, no Telegram, no dashboard:
-see `SCHEDULED_TASKS.md`. The pipeline runs inside Claude scheduled tasks and rebuilds from free data each time;
-`bootstrap.sh` + `MANIFEST.txt` are what those sessions fetch.
+**Hybrid (current choice)** — GitHub Actions does the compute and commits the outputs; a Claude scheduled task
+(subscription, no API key) reads them and writes the memo; no Telegram, no dashboard. See `SCHEDULED_TASKS.md`.
+The in-session rebuild from the Claude Project's docs is kept as the fallback path inside the task prompts.
 
-**Full mode** — GitHub Actions + Telegram + Vercel dashboard, as below. Both modes share all signal code.
+**Full mode** — adds Telegram, the API narrative and the Vercel dashboard, as below. Both modes share all signal code.
 
 ## Full-mode one-time setup (about 20 minutes)
 

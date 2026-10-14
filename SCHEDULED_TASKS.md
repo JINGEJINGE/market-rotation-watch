@@ -1,97 +1,87 @@
-# Subscription-only mode: two daily memos in the Claude app, no API, no dashboard, no Telegram
+# Hybrid mode: GitHub Actions computes, Claude scheduled tasks write the memos
 
-This mode runs the whole pipeline inside a **Claude scheduled task**. Each firing starts a fresh cloud session on
-your subscription, fetches the code zip from Google Drive, rebuilds 18 months of prices and the flow history from the free
-sources, computes every signal, and then Claude itself — not the API — writes the memo and posts it as the run's
-result, with a push notification to your phone. Nothing is stored between runs except the code and the
-constituent lists in the Drive zip; a run takes about 15 minutes.
+Two daily memos arrive in the Claude app with no API key, no Telegram and no dashboard. Since 14 Oct 2026 the
+work is split in two:
 
-What you keep from the full build: every signal layer, the 17 themes, the regime verdict, flows, lead-lag,
-scorecard, the heatmap image. What you give up: the dashboard (the code stays in `site/` for later) and the
-cumulative digest archive in git (memos are archived in the Claude Project instead). GitHub is not involved in this mode; `bootstrap.sh` /
-`MANIFEST.txt` remain for the GitHub variant.
+| Step | Where | What |
+|---|---|---|
+| Compute | **GitHub Actions** in the public repo `JINGEJINGE/market-rotation-watch` | `run.py --run us|asia --no-telegram --no-llm`: incremental price + flow fetch, every signal, the digest tables, `latest.json`, the PNGs. Commits the results to `main`. ~4–5 min. |
+| Memo | **Claude scheduled task** (subscription, automatic approval, push notification) | Downloads `digests/<date>-*.md`, `latest.json` and the PNG from the repo with `curl` (data files only — no code is executed), writes the memo, posts it as the run's result, saves a copy to the Project under `memos/`. ~2 min. |
 
-## How it is wired (done 14 Oct 2026)
+Why this split: the scheduled session's guardrail refuses to execute code it downloaded during the run, and it may
+refuse the Project-docs rebuild too; reading a Markdown/JSON/PNG file is never gated. GitHub also gives the pipeline
+persistent state (the parquet history is committed, so each run fetches a week, not 18 months; Taiwan/Korea flow
+history accumulates), version control for the code, and 90 days of per-step logs.
 
-- **Code lives in Google Drive**: folder "Market Rotation Watch" → `mrw-pipeline.zip` (124 KB: pipeline code, the
-  three config files, the five constituent CSVs and the metadata cache; no price or flow data, nothing secret).
-  Shared as "anyone with the link, viewer" so a scheduled session can fetch it with a plain download.
-  File ID `1Io_g-5wGQTiufnJ3y8VhaOg8Zc1HFrJ-` — baked into both task prompts.
-- **Two Claude scheduled tasks** (created from the Cowork session, automatic approval, push notification on):
-  `MRW US close memo` — 06:30 Singapore, Tue–Sat · `MRW Asia close memo` — 18:00 Singapore, Mon–Fri.
-  Each run: download zip → unzip → pip install → `python run.py --run us|asia --no-telegram --no-llm` (~13 min)
-  → Claude writes the memo from `digests/<date>-us|asia.md` → memo is the run's final message (push opens it)
-  → heatmap/RRG image attached → copy saved to the Claude Project as `memos/<date>-us|asia.md`.
-- Nothing is written back to Drive; runs are independent.
+## Schedule (Singapore time)
 
-**Updating the zip** (theme edits, event calendar, monthly constituent refresh, source fixes): rebuild
-`mrw-pipeline.zip` (`zip -r mrw-pipeline.zip pipeline data/universe -x '*__pycache__*'` from the repo folder, or ask
-Claude), then in Drive right-click the file → *Manage versions* → *Upload new version*. The file ID stays the same,
-so the tasks never need editing. Re-sharing is not needed.
+| | GitHub Actions workflow | Claude task | Buffer |
+|---|---|---|---|
+| US close | `us-close.yml` · cron `37 21 * * 1-5` UTC = **05:37 Tue–Sat** | **MRW US close memo** · `CRON_TZ=Asia/Singapore 30 6 * * 2-6` | 53 min |
+| Asia close | `asia-close.yml` · cron `17 9 * * 1-5` UTC = **17:17 Mon–Fri** | **MRW Asia close memo** · `CRON_TZ=Asia/Singapore 0 18 * * 1-5` | 43 min |
+| Universe refresh | `refresh-universe.yml` · 1st of month 10:00 | — | |
 
-**Changing a task** (time, wording of the memo): Claude app → scheduled tasks → edit the prompt or schedule; or ask
-Claude in a session (`update_trigger`). Pausing: toggle the task off; nothing else to stop.
+GitHub's cron is best-effort (5–30 min late at busy hours), hence the buffers. The Claude task checks freshness twice
+(digest date, then `meta.generated_at` and `meta.run` in `latest.json`), waits 10 minutes and retries once, and only
+then falls back to rebuilding the pipeline in-session from the Project docs (the previous all-in-Claude design, kept
+verbatim as STEP 1-FALLBACK in both prompts).
 
-## Task 1 — "MRW US close memo"  ·  cron `30 22 * * 1-5` (06:30 SGT Tue–Sat)
+## What the Claude task does (both prompts have the same shape)
 
 ```
-You are producing the Market Rotation Watch US-close memo. Do all of this without asking questions; if something
-fails, say so in the memo and continue with what you have.
-
-1. In a scratch directory run:
-     curl -sSL https://raw.githubusercontent.com/OWNER/REPO/main/bootstrap.sh | bash -s OWNER/REPO
-     cd mrw/pipeline && pip install -q -r requirements.txt && python run.py --run us --no-telegram --no-llm
-   Expect 12–18 minutes. If a Yahoo rate-limit error aborts the run, wait 10 minutes and run the python command again once.
-
-2. Read the newest file in mrw/digests/ (it ends in -us.md). It holds the computed tables: regime per market,
-   rotation leaders and laggards with their confirmation metrics, investor flows, the theme table with lead-lag,
-   RRG transitions, persistence milestones, upcoming events, and a data note if any source was stale.
-   Also read mrw/data/outputs/latest.json only if you need a number the digest does not show (e.g. a specific
-   theme's country breakdown, contributors, or the scorecard).
-
-3. Write the memo for Ge, an experienced investor in Singapore reading on his phone before the Asia open.
-   Use ONLY numbers that appear in the digest or latest.json; never invent a figure, flow or event.
-   Structure, in this order, plain English, no preamble:
-     - Headline (one line): the regime verdict for the US session and the single most important rotation.
-     - The read (250–350 words): where capital rotated in and out overnight and whether each move is CONFIRMED
-       (turnover share up, breadth participating, beta-adjusted residual positive) or price-only; what the
-       lead-lag table implies for today's KR/JP/TW/HK open by theme; anything the scorecard says about how
-       reliable today's strongest signal type has been.
-     - Rotating in / Rotating out: five baskets each, one line per basket: name · composite score · residual 5d ·
-       turnover quadrant · RRG quadrant and days · top contributor and share of move.
-     - Themes: the five biggest movers (USD), one line each with the implied Asia move where available.
-     - Flows: Korea foreign/institutional, Southbound, Taiwan foreign — 1d and 5d with z-scores; Japan weekly.
-     - Watch: RRG transitions and persistence milestones; events in the next two sessions.
-     - Data note: as-of dates per market and any stale source.
-
-4. Deliver it: post the complete memo as your final message (it is what the push notification opens), send
-   mrw/data/outputs/charts/heatmap.png with SendUserFile so it appears under the memo, and save a copy of the memo
-   to the project with project_write at path memos/<as-of date>-us.md.
+STEP 1   curl digests.json → newest <date>-us|asia.md → freshness check → curl the digest, latest.json, heatmap|rrg.png
+         second check: latest.json meta.run == us|asia and generated_at after 05:00 | 17:00 SGT today
+STEP 1-FALLBACK (only if STEP 1 fails twice)  rebuild from the 23 Project docs and run the pipeline in-session (12–18 min)
+STEP 2   read the digest; latest.json only for numbers the digest lacks
+STEP 3   memo: headline · the read (250–350 words) · rotating in/out (5 each) · themes · flows · watch · data note
+STEP 4   memo as final message (push opens it) · SendUserFile heatmap.png | rrg.png · project_write memos/<date>-us|asia.md
 ```
 
-## Task 2 — "MRW Asia close memo"  ·  cron `0 10 * * 1-5` (18:00 SGT Mon–Fri)
+The live prompts are on the tasks themselves (Claude app → scheduled tasks). A disabled one-shot task
+**MRW hybrid test (US)** keeps the test variant (saves to `memos/<date>-us-hybridtest.md`); enable and run it to re-test.
 
-Identical to Task 1 with these substitutions: `--run asia`; read the newest `-asia.md`; the reader is preparing for
-the US open, so the lead-lag section becomes "did Asia follow the implied US move (realised vs implied, surprise)"
-and the themes section leads with the Asian country baskets; send `rrg.png` instead of `heatmap.png`; save to
-`memos/<as-of date>-asia.md`.
+## Where things live
 
-## Why this is the efficient path
+- **Code and data of record: the GitHub repo.** `pipeline/`, `pipeline/config/*.yaml`, `data/universe/*.csv`,
+  `data/prices/**` and `data/flows/**` (parquet, committed by the bot), `data/outputs/`, `digests/`, `site/`.
+  The working copy on the Mac is `Market Rotation Watch/market-rotation-watch/` (not a git checkout — see "Updating").
+- **Project docs (23 files):** a copy of the pipeline source and constituent CSVs, used only by STEP 1-FALLBACK.
+  Keep them in sync with the repo when the code changes (`project_write` with `local_path`).
+- **Memos:** `memos/<date>-us.md` and `memos/<date>-asia.md` in the Project. Digest tables: `digests/` in the repo.
 
-- No servers, no API key, no third-party app: the compute is the scheduled session, the "push" is the app's own
-  notification, the archive is the Project.
-- Stateless by design: every run rebuilds from the free sources, so nothing can silently go stale in a database;
-  the cost is ~13 minutes of fetching per run, which the session does while you are asleep or at dinner.
-- The narrative is written by the Claude model your subscription already includes, from the same deterministic
-  tables the API version would have used, under the same "numbers only from the tables" rule.
-- The dashboard can be switched on later with the original GitHub Actions + Vercel path (README) without changing
-  any of the signal code.
+## Updating the code (theme edits, event calendar, source fixes)
 
-## Known limits of this mode
+1. Edit the file in the Mac folder `market-rotation-watch/`.
+2. Push to GitHub. From a Cowork session the push is done from the Mac's VM (the cloud workspace's git proxy only
+   pushes to pre-authorised repos): the VM keeps a clone in `$HOME/mrw-repo/market-rotation-watch` with the token in
+   `$HOME/.mrw/gh_token`; copy the changed file in, commit, `git pull --rebase`, push. Or push from Terminal with your
+   own GitHub login once the Mac folder is a clone.
+3. Overwrite the matching Project doc(s) so the fallback matches.
+4. A new source file also needs its path added to the F2 list in both task prompts.
 
-- Yahoo throttling: a run that hits `Too Many Requests` retries with back-off; a second failure means that memo is
-  skipped and the next run is unaffected.
-- TWSE's WAF refuses roughly half of the historical requests, so Taiwan sector flow z-scores need ~30 successful
-  days and may show as "–" for the first weeks. Korea, Hong Kong and Japan flows are complete from the first run.
-- The scorecard is recomputed from 18 months of history each run (no live accumulation); it is still the honest
-  baseline for weighting the signals.
+Constituent refresh runs monthly on Actions by itself (`refresh-universe.yml`); after it, copy the five
+`data/universe/*.csv` and `meta_cache.csv` into the Project docs if you want the fallback to use the new lists.
+
+## Operating notes
+
+- Manual run: repo → Actions → workflow → Run workflow (or `POST /repos/.../actions/workflows/<file>/dispatches`).
+  Do not run the Asia workflow while Asia is open: it commits an intraday snapshot stamped with today's date (the
+  17:17 run overwrites it, and the Claude task's `generated_at` check ignores it).
+- Logs: Actions → the run → "Run pipeline" step. Look for `ERROR mrw` / `WARNING mrw` lines, the per-market
+  `N/N tickers, last date` lines and `run us|asia complete in Ns`.
+- `prices.py` isolates each market: a bad batch or a delisted new constituent no longer aborts the whole update,
+  and the digest's data note says which market was not updated. Delisted symbols in `themes.yaml` still cost a
+  60-second wait each run — remove them (14 Oct: `0877.HK`, `7342.T`).
+- Southbound "failed: '-'" warnings on mainland holidays (e.g. Golden Week) are expected: no Southbound trading.
+- Both workflows share the concurrency group `mrw-pipeline`; the commit step rebases with `-X theirs` so a run's
+  own outputs always win if another run committed meanwhile.
+- Free-tier Actions budget: ~5 min × ~43 runs/month ≈ 220 min, against 2,000 (public repos are unlimited anyway).
+- Pausing: toggle the Claude task off; the Actions workflow can keep running (cheap) or be disabled in the Actions tab.
+
+## Known limits
+
+- Yahoo throttling: the runner's IP is a GitHub datacenter range; a `Too Many Requests` abort is retried with back-off
+  and the digest reports the stale market. If it recurs, move the cron a few minutes or add a second attempt.
+- TWSE's WAF refuses roughly half of the historical requests; with committed history this now heals over time.
+- Constituents are current lists applied to history (survivorship bias in the backfilled scorecard).
+- No free daily US fund-flow source; US `flow_z` is empty.
