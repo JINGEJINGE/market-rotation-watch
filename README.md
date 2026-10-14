@@ -1,7 +1,7 @@
 # Market Rotation Watch
 
 Daily monitor of capital rotation — sector to sector, theme to theme, market to market — across the
-US, Korea, Hong Kong, Japan and Taiwan. Free data only. See `DESIGN.md` for the full design.
+US, Korea, Hong Kong, Japan and Taiwan. Free data only. See `claude/DESIGN.md` for the full design and `claude/PLAN-v2-content.md` for the v2 content plan.
 
 Two runs a day (Singapore time): **17:17** after the Asia close and **05:37** after the US close, on
 GitHub Actions. Each run updates prices and investor flows, recomputes every signal, writes
@@ -78,6 +78,19 @@ the narrative locally too. `MRW_LLM_MODEL` overrides the model (default `claude-
 - **Lead-lag**: US theme members' session return vs next-session return of each Asian country's members (60-day β).
 - **Composite** = 0.35·residual z + 0.25·turnover z + 0.25·flow z + 0.15·breadth-change z, renormalised over available components.
 - **Scorecard**: forward 5/20-day residual after each signal event, last two years, backfilled from history.
+  The digest prints the 5-day hit rate and n per signal type and market; below 50% is labelled "unconfirmed signal".
+- **Leaders / laggards** skip thin baskets (n < 5) and concentrated ones (one name > 60% of the day's move);
+  those are listed under the table as excluded (`leaders_flagged` / `laggards_flagged` in `latest.json`).
+- **Thesis tracker** (`data/outputs/theses.json`, `theses` in `latest.json`): up to five rotations opened on
+  composite crossings (±threshold) or RRG Leading/Lagging entries with breadth participating, with a daily status
+  (new / continuing / fading / reversed / closed).
+- **Overview blocks**: `us_overview` / `asia_overview` in `latest.json` — indices, rates, FX, commodities, sector and
+  industry ETFs, mega-caps, ADRs, country ETFs and Asian single names (the memo kit's ticker lists), one Yahoo batch.
+- **Events**: next two sessions from `config/events.yaml`, the next scheduled event after that, active/imminent
+  earnings seasons, and US universe names reporting (`data/universe/earnings_US.csv`, refreshed weekly).
+
+US universe: S&P 500 ∪ Nasdaq-100 (benchmark stays the S&P 500). After changing it, run the *Monthly universe
+refresh* workflow by hand with `markets = US`.
 
 ## Known limits
 

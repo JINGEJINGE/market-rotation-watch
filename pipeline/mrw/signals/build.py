@@ -196,6 +196,7 @@ def compute_basket(d: Data, b: Basket, flows: dict, market_turnover_local: dict,
         "flow_detail": {k: M.fl(M.last(v.reindex(dates).rolling(5, min_periods=3).sum()), 0) for k, v in fl.items() if k != "coverage"} if fl else None,
         "composite": M.fl(M.last(composite), 2),
         "composite_components": {k: M.fl(M.last(v), 2) for k, v in comps.items() if v is not None},
+        **M.basket_flags(len(b.tickers), contrib),
     }
     series = {
         "rrg_trail": [[M.fl(a, 2), M.fl(bm, 2)] for a, bm in trail.values.tolist()],
@@ -204,7 +205,8 @@ def compute_basket(d: Data, b: Basket, flows: dict, market_turnover_local: dict,
         "flow_20d_series": [M.fl(v, 0) for v in flow_series.tail(20).tolist()] if flow_series is not None else None,
     }
     history = pd.DataFrame({"quadrant": rr["quadrant"], "composite": composite, "residual": res,
-                            "share_z": share_z, "rel5": rel[5]})
+                            "share_z": share_z, "rel5": rel[5], "res5_z": res5_z, "pct_above_20": br["pct_above_20"],
+                            "flow_z": flow_z if flow_z is not None else np.nan})
     return {"basket": b, "latest": latest, "series": series, "contributors": contrib, "history": history,
             "n": len(b.tickers)}
 
@@ -411,23 +413,78 @@ def compute_scorecard(results: list[dict]) -> dict:
 
 
 # ----------------------------------------------------------------------------- events
-def upcoming_events(as_of: pd.Timestamp, days: int = 4) -> list[dict]:
+LEAD_MARKET = {"us": "US", "asia": "HK"}
+
+
+def _next_sessions(market: str, after: pd.Timestamp, n: int) -> list[pd.Timestamp]:
     import exchange_calendars as xc
+    cal = xc.get_calendar(MARKETS[market]["calendar"])
+    out, s = [], pd.Timestamp(after).normalize()
+    while len(out) < n:
+        s = cal.next_session(s) if cal.is_session(s) else cal.date_to_session(s, direction="next")
+        out.append(pd.Timestamp(s).tz_localize(None) if pd.Timestamp(s).tzinfo else pd.Timestamp(s))
+    return out
+
+
+def upcoming_events(as_of: dict, run: str) -> list[dict]:
+    """(a) events and holidays from today (Singapore) through the next two sessions of the run's lead market,
+    (b) the next scheduled event beyond that, (c) earnings-season windows active or starting within five sessions."""
+    import exchange_calendars as xc
+    lead = LEAD_MARKET.get(run, "US")
+    lead_asof = pd.Timestamp(as_of.get(lead, max(as_of.values())))
+    nxt = _next_sessions(lead, lead_asof, 5)
+    today = pd.Timestamp.now(tz="Asia/Singapore").normalize().tz_localize(None)
+    start, end = min(today, nxt[0]), nxt[1]
     out = []
-    end = as_of + pd.Timedelta(days=days)
-    for e in EVENTS_CFG.get("events", []):
+    evs = sorted(EVENTS_CFG.get("events", []), key=lambda e: str(e["date"]))
+    for e in evs:
         dte = pd.Timestamp(e["date"])
-        if as_of <= dte <= end:
+        if start <= dte <= end:
             out.append({"date": dte.strftime("%Y-%m-%d"), "market": e["market"], "label": e["label"], "kind": "event"})
-    for s in EVENTS_CFG.get("seasons", []):
-        if pd.Timestamp(s["start"]) <= as_of <= pd.Timestamp(s["end"]):
-            out.append({"date": None, "market": "ALL", "label": s["label"], "kind": "season"})
+    later = next((e for e in evs if pd.Timestamp(e["date"]) > end), None)
+    if later:
+        out.append({"date": pd.Timestamp(later["date"]).strftime("%Y-%m-%d"), "market": later["market"],
+                    "label": later["label"], "kind": "next"})
+    for se in EVENTS_CFG.get("seasons", []):
+        s0, s1 = pd.Timestamp(se["start"]), pd.Timestamp(se["end"])
+        if s0 <= max(today, nxt[0]) <= s1 or (s0 > today and s0 <= nxt[4]):
+            active = s0 <= max(today, nxt[0])
+            out.append({"date": None, "market": "ALL", "label": se["label"], "kind": "season",
+                        "start": s0.strftime("%Y-%m-%d"), "end": s1.strftime("%Y-%m-%d"),
+                        "status": "active" if active else f"starts {s0.strftime('%Y-%m-%d')}"})
     for m, c in MARKETS.items():
         cal = xc.get_calendar(c["calendar"])
-        for dte in pd.date_range(as_of, end):
+        for dte in pd.date_range(start, end):
             if dte.weekday() < 5 and not cal.is_session(dte):
                 out.append({"date": dte.strftime("%Y-%m-%d"), "market": m, "label": f"{MARKETS[m]['name']} market holiday", "kind": "holiday"})
-    return sorted(out, key=lambda x: (x["date"] or "", x["market"]))
+    kind_order = {"holiday": 0, "event": 1, "next": 2, "season": 3}
+    return sorted(out, key=lambda x: (kind_order[x["kind"]] >= 2, x["date"] or "9999", kind_order[x["kind"]], x["market"]))
+
+
+def upcoming_earnings(d: Data, as_of: dict, cap: int = 25) -> dict:
+    """US universe names reporting in the next two US sessions, by sector, largest market cap first."""
+    from ..ingest.earnings import cache_age_days, load_earnings
+    us_asof = pd.Timestamp(as_of.get("US", max(as_of.values())))
+    sess = _next_sessions("US", us_asof, 2)
+    days = [s.strftime("%Y-%m-%d") for s in sess]
+    ec = load_earnings()
+    out = {"sessions": days, "cache_age_days": cache_age_days(), "count": 0, "shown": 0, "by_sector": {}}
+    if ec.empty:
+        out["note"] = "no earnings cache yet (data/universe/earnings_US.csv)"
+        return out
+    u = d.universe[d.universe.market == "US"].set_index("ticker")
+    hits = ec[ec["date"].isin(days) & ec["ticker"].isin(u.index)].drop_duplicates("ticker")
+    if hits.empty:
+        return out
+    hits = hits.assign(sector=hits["ticker"].map(u["sector"]), name=hits["ticker"].map(u["name"]),
+                       mcap=hits["ticker"].map(u["mcap_local"]).astype(float)).sort_values("mcap", ascending=False)
+    out["count"] = int(len(hits))
+    top = hits.head(cap)
+    out["shown"] = int(len(top))
+    for sec, g in top.groupby("sector", sort=False):
+        out["by_sector"][sec] = [{"ticker": r.ticker, "name": r.name, "date": r.date, "time": r.time,
+                                  "mcap_bn": M.fl(r.mcap / 1e9, 1) if pd.notna(r.mcap) else None} for r in g.itertuples()]
+    return out
 
 
 # ----------------------------------------------------------------------------- assemble
@@ -452,6 +509,12 @@ def build_outputs(run: str, source_report: dict | None = None) -> dict:
     mflows = market_flows(d)
     leadlag = compute_leadlag(d, results, run)
     scorecard = compute_scorecard(results)
+    from .theses import update_theses
+    try:
+        theses = update_theses(results, max(regime[m]["as_of"] for m in regime))
+    except Exception as e:  # noqa: BLE001
+        log.warning("thesis tracker failed: %s", repr(e)[:200])
+        theses = {"open": [], "closed": [], "error": repr(e)[:200]}
 
     baskets_out = []
     for r in results:
@@ -480,14 +543,25 @@ def build_outputs(run: str, source_report: dict | None = None) -> dict:
     latest_asof = max(pd.Timestamp(v) for v in as_of.values())
     ranked = sorted([x for x in baskets_out if x["type"] in ("sector", "theme") and x["composite"] is not None],
                     key=lambda x: x["composite"], reverse=True)
+    # leaders / laggards exclude thin (n<5) and concentrated (one name >60% of the move) baskets; the ones that
+    # would otherwise have ranked in the top/bottom N are listed separately so the digest can name them
+    top_n = 8
+    clean = [x for x in ranked if not (x["thin"] or x["concentrated"])]
+    flag = lambda xs: [{"id": x["id"], "name": x["name"], "market": x["market"], "composite": x["composite"],  # noqa: E731
+                        "thin": x["thin"], "concentrated": x["concentrated"], "flag_reason": x["flag_reason"],
+                        "flag_name": x["flag_name"], "flag_share": x["flag_share"], "n": x["n"]}
+                       for x in xs if x["thin"] or x["concentrated"]]
     out = {
         "meta": {"run": run, "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
                  "as_of": as_of, "sources": source_report or {}, "params": P,
-                 "basket_count": len(baskets_out), "universe_counts": d.universe.groupby("market").size().to_dict()},
+                 "basket_count": len(baskets_out), "universe_counts": d.universe.groupby("market").size().to_dict(),
+                 "universe_names": {m: c.get("universe_name", c["universe"]) for m, c in MARKETS.items()}},
         "regime": regime,
         "baskets": baskets_out,
-        "leaders": [x["id"] for x in ranked[:8]],
-        "laggards": [x["id"] for x in ranked[-8:]][::-1],
+        "leaders": [x["id"] for x in clean[:top_n]],
+        "laggards": [x["id"] for x in clean[-top_n:]][::-1],
+        "leaders_flagged": flag([x for x in ranked if x["composite"] > 0][:top_n]),
+        "laggards_flagged": flag([x for x in ranked if x["composite"] < 0][::-1][:top_n]),
         "transitions": [{"id": x["id"], "name": x["name"], "market": x["market"], "from": x["quadrant_prev"], "to": x["quadrant"]}
                         for x in baskets_out if x["type"] in ("sector", "theme") and x["transition"] and x["quadrant_prev"]],
         "persistence_milestones": [{"id": x["id"], "name": x["name"], "market": x["market"], "quadrant": x["quadrant"], "days": x["persist_days"]}
@@ -495,7 +569,10 @@ def build_outputs(run: str, source_report: dict | None = None) -> dict:
         "heatmap": heatmap,
         "themes": themes_out,
         "market_flows": mflows,
-        "events": upcoming_events(latest_asof),
+        "events": upcoming_events(as_of, run),
+        "earnings": upcoming_earnings(d, as_of),
         "scorecard": scorecard,
+        "theses": theses.get("open", []),
+        "theses_closed_recent": [t for t in theses.get("closed", []) if t.get("closed", "") >= (latest_asof - pd.Timedelta(days=7)).strftime("%Y-%m-%d")],
     }
     return out

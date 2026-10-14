@@ -177,7 +177,8 @@ def update_hk(backfill_days: int = 120) -> dict:
     new["net"] = new["buy"] - new["sell"]
     merged = pd.concat([existing, new], ignore_index=True) if not existing.empty else new
     _save("HK", merged, ["date", "channel", "ticker"])
-    return {"ok": True, "days_fetched": fetched, "last_date": str(new["date"].max().date())}
+    return {"ok": True, "days_fetched": fetched, "fetched_dates": sorted({str(x.date()) for x in pd.to_datetime(new["date"])}),
+            "last_date": str(pd.to_datetime(merged["date"]).max().date())}
 
 
 # ----------------------------------------------------------------------------- Taiwan (TWSE T86)
@@ -233,7 +234,9 @@ def update_tw(backfill_days: int = 60) -> dict:
     new = pd.DataFrame(rows)
     merged = pd.concat([existing, new], ignore_index=True) if not existing.empty else new
     _save("TW", merged, ["date", "ticker"])
-    return {"ok": True, "days_fetched": fetched, "last_date": str(new["date"].max().date())}
+    # last_date = newest session now stored (a run that only back-fills old gaps used to report the gap's date)
+    return {"ok": True, "days_fetched": fetched, "fetched_dates": sorted({str(x.date()) for x in pd.to_datetime(new["date"])}),
+            "last_date": str(pd.to_datetime(merged["date"]).max().date())}
 
 
 # ----------------------------------------------------------------------------- Japan (JPX weekly)

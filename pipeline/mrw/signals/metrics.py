@@ -85,6 +85,30 @@ def contributors(ret_row: pd.Series, w_row: pd.Series, names: dict[str, str], k:
     return {"total": float(total), "top": fmt(top), "bottom": fmt(bottom), "hhi": hhi, "n": int(len(c))}
 
 
+MIN_NAMES = 5          # baskets with fewer names are flagged "thin"
+MAX_SHARE = 0.60       # one contributor above this share of the day's move flags the basket "concentrated"
+
+
+def basket_flags(n: int, contrib: dict | None) -> dict:
+    """Minimum-size and concentration flags for the leaders/laggards lists (flag, never drop)."""
+    thin = n < MIN_NAMES
+    worst = None
+    if contrib:
+        for c in contrib.get("top", []) + contrib.get("bottom", []):
+            sh = c.get("share_of_move")
+            if sh is not None and not np.isnan(sh) and abs(sh) > MAX_SHARE and (worst is None or abs(sh) > abs(worst["share_of_move"])):
+                worst = c
+    concentrated = worst is not None
+    reasons = []
+    if thin:
+        reasons.append(f"n<{MIN_NAMES}")
+    if concentrated:
+        reasons.append(f"one name {abs(worst['share_of_move']) * 100:.0f}% of move")
+    return {"thin": thin, "concentrated": concentrated, "flag_reason": "; ".join(reasons) or None,
+            "flag_name": worst["name"] if concentrated else None,
+            "flag_share": round(abs(worst["share_of_move"]), 3) if concentrated else None}
+
+
 def turnover_quadrant(rel_5d: float, share_z: float) -> str | None:
     if rel_5d is None or share_z is None or np.isnan(rel_5d) or np.isnan(share_z):
         return None

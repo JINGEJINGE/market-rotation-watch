@@ -40,6 +40,31 @@ STEP 4   memo as final message (push opens it) · SendUserFile heatmap.png | rrg
 The live prompts are on the tasks themselves (Claude app → scheduled tasks). A disabled one-shot task
 **MRW hybrid test (US)** keeps the test variant (saves to `memos/<date>-us-hybridtest.md`); enable and run it to re-test.
 
+## Update 14 Oct 2026 (afternoon): US memo v2 — PDF from the Project template
+
+After Ge's review of the first live memo, the **MRW US close memo** task prompt was replaced. STEP 1 and the fallback
+are unchanged; the memo itself is now built from a kit stored in the Project under `claude/memo_template/`:
+
+```
+STEP 2   project_read the kit (us_close.html · build_us_memo.py · fetch_us_overview.py · render_pdf.py · narrative.example.json)
+         python fetch_us_overview.py <date>   → us_close.csv / us_vol.csv (Yahoo, 79 tickers: indices, rates, FX, oil, gold,
+                                                 credit, 11 sector ETFs, 18 industry ETFs, Mag 7 + AVGO, 23 Asian ADRs, 5 country ETFs)
+         python build_memo.py --dump > dump.txt → every number Claude may use (regime, benchmarks, mega-caps, sectors with
+                                                 pipeline confirmation, industry ETFs, theme US legs, ADRs, lead-lag, transitions,
+                                                 persistence, events, scorecard, source log)
+STEP 3   Claude writes narrative.json (headline · 3-line brief · 4–5 insight blocks claim/evidence/so-what · Asia-in-the-US
+         text · watch · data note) — structure fixed by narrative.example.json
+STEP 4   python build_memo.py && python render_pdf.py → A5 PDF (6–10 pages) · SendUserFile · project_write
+         memos/<date>-us-narrative.json + memos/<date>-us-tables.txt (PDFs cannot be stored as Project docs) ·
+         final message = exactly three lines (the push text)
+```
+
+Decisions taken by Ge on 14 Oct: keep the one-line read-across to the Asia open in the US memo; delivery is the PDF plus
+a three-line chat summary; US sector universe becomes S&P 500 ∪ Nasdaq-100 (pipeline change, pending a push to the
+repo); the thesis tracker is seeded by the pipeline, not by hand. Content plan: `claude/PLAN-v2-content.md`.
+
+The Asia memo task still runs the v1 text prompt; it is rebuilt next on the same kit (`asia_close.html`).
+
 ## Where things live
 
 - **Code and data of record: the GitHub repo.** `pipeline/`, `pipeline/config/*.yaml`, `data/universe/*.csv`,
@@ -47,7 +72,9 @@ The live prompts are on the tasks themselves (Claude app → scheduled tasks). A
   The working copy on the Mac is `Market Rotation Watch/market-rotation-watch/` (not a git checkout — see "Updating").
 - **Project docs (23 files):** a copy of the pipeline source and constituent CSVs, used only by STEP 1-FALLBACK.
   Keep them in sync with the repo when the code changes (`project_write` with `local_path`).
-- **Memos:** `memos/<date>-us.md` and `memos/<date>-asia.md` in the Project. Digest tables: `digests/` in the repo.
+- **Memo kit:** `claude/memo_template/` (template, build, fetch, render, example narrative) — read by the US task every run.
+- **Memos:** `memos/<date>-us-narrative.json` + `memos/<date>-us-tables.txt` (v2) and `memos/<date>-asia.md` in the Project.
+  Digest tables: `digests/` in the repo.
 
 ## Updating the code (theme edits, event calendar, source fixes)
 

@@ -4,6 +4,8 @@
   python run.py --run us              # morning run (after US close)
   python run.py --run asia --no-fetch # recompute from stored data only
   python run.py --universe            # rebuild constituent lists + metadata (monthly)
+  python run.py --universe --markets US   # rebuild one market's list only
+  python run.py --earnings            # refresh the US earnings calendar cache (weekly)
   python run.py --backfill            # full 3-year price backfill
 """
 from __future__ import annotations
@@ -24,6 +26,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", choices=["asia", "us"], default=None)
     ap.add_argument("--universe", action="store_true", help="rebuild universes and metadata")
+    ap.add_argument("--markets", default=None, help="comma-separated markets for --universe (default: all)")
+    ap.add_argument("--earnings", action="store_true", help="refresh the US earnings calendar cache")
     ap.add_argument("--backfill", action="store_true", help="full price backfill")
     ap.add_argument("--no-fetch", action="store_true", help="skip all network fetches")
     ap.add_argument("--no-flows", action="store_true")
@@ -35,7 +39,12 @@ def main() -> int:
 
     if args.universe:
         from mrw.universe.build import build_all
-        sources["universe"] = build_all()
+        sources["universe"] = build_all(markets=args.markets.split(",") if args.markets else None)
+
+    if args.earnings:
+        from mrw.ingest.earnings import refresh_earnings
+        from mrw.universe.build import load_universe
+        sources["earnings"] = refresh_earnings(load_universe("US")["ticker"].tolist(), budget_s=3600)
 
     if args.backfill:
         from mrw.ingest.prices import update_prices
@@ -55,9 +64,24 @@ def main() -> int:
         if not args.no_flows:
             from mrw.ingest.flows import update_all
             sources["flows"] = update_all()
+        if args.run == "us":  # weekly earnings calendar, refreshed opportunistically when the cache is stale
+            from mrw.ingest.earnings import maybe_refresh
+            from mrw.universe.build import load_universe
+            try:
+                sources["earnings"] = maybe_refresh(load_universe("US")["ticker"].tolist(), budget_s=600)
+            except Exception as e:  # noqa: BLE001
+                log.warning("earnings refresh failed: %s", e)
+                sources["earnings"] = {"error": repr(e)[:200]}
 
     from mrw.signals.build import build_outputs
     out = build_outputs(args.run, sources)
+    # index / ETF / single-name overview for the memo kit (replaces the kit's own Yahoo pulls)
+    if args.no_fetch:
+        from mrw.ingest.overview import groups_for
+        out[f"{args.run}_overview"] = {"as_of": None, "groups": groups_for(args.run), "rows": {}, "error": "not fetched (--no-fetch)"}
+    else:
+        from mrw.ingest.overview import build_overview
+        out[f"{args.run}_overview"] = build_overview(args.run)
 
     from mrw.digest.build import digest_markdown, telegram_text
     md = digest_markdown(out, args.run)
@@ -68,6 +92,15 @@ def main() -> int:
     if narrative:
         md = md.replace("## 1. Regime", f"## 0. Read\n\n{narrative}\n\n## 1. Regime", 1)
     out["digest"] = {"markdown": md, "narrative": narrative}
+    # carry the other run's overview block forward so latest.json always holds both
+    other = "asia" if args.run == "us" else "us"
+    try:
+        import json
+        prev = json.loads((OUTPUT_DIR / "latest.json").read_text(encoding="utf-8"))
+        if prev.get(f"{other}_overview"):
+            out[f"{other}_overview"] = prev[f"{other}_overview"]
+    except Exception:  # noqa: BLE001
+        pass
 
     stamp = max(out["meta"]["as_of"].values())
     write_json(OUTPUT_DIR / "latest.json", out)

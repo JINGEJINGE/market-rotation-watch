@@ -64,12 +64,25 @@ def _download(tickers: list[str], start: dt.date | None, period: str | None) -> 
         df = pd.concat([close, vol], axis=1).reset_index()
         df.columns = ["date", "ticker", "close", "volume"]
         df = df.dropna(subset=["close"])
-        df["date"] = pd.to_datetime(df["date"]).dt.tz_localize(None).dt.normalize()
+        df["date"] = naive_dates(df["date"])
         frames.append(df)
         time.sleep(2.0)
     if not frames:
         return _empty_prices()
     return pd.concat(frames, ignore_index=True)
+
+
+def naive_dates(s: pd.Series) -> pd.Series:
+    """Session dates as tz-naive midnight timestamps. A batch that mixes exchanges (benchmarks, FX and theme
+    members in XTRA) can come back with per-row timezones, which pandas keeps as object dtype — the `.dt`
+    accessor then fails ("Can only use .dt accessor with datetimelike values"). Strip each row's own timezone
+    (keeping its local calendar date) before converting."""
+    if pd.api.types.is_datetime64_any_dtype(s):
+        out = s.dt.tz_localize(None) if getattr(s.dt, "tz", None) is not None else s
+        return out.dt.normalize()
+    conv = [pd.Timestamp(x) for x in s]
+    conv = [x.tz_localize(None) if x.tzinfo is not None else x for x in conv]
+    return pd.Series(pd.DatetimeIndex(conv).normalize(), index=s.index)
 
 
 def _empty_prices() -> pd.DataFrame:
@@ -115,7 +128,7 @@ def update_prices(full: bool = False) -> dict:
 def _update_group(group: str, tickers: list[str], full: bool, years: float) -> dict:
     existing = _load_group(group)
     if not existing.empty:
-        existing["date"] = pd.to_datetime(existing["date"])
+        existing["date"] = naive_dates(existing["date"])
     if full or existing.empty:
         start = (pd.Timestamp.today() - pd.Timedelta(days=int(years * 365))).date()
         new = _download(tickers, start, None)
@@ -135,9 +148,9 @@ def _update_group(group: str, tickers: list[str], full: bool, years: float) -> d
     if new.empty:
         log.warning("%s: no new price data", group)
         return {"tickers": len(tickers), "last_date": str(existing["date"].max().date()) if not existing.empty else None, "updated": False}
-    new["date"] = pd.to_datetime(new["date"])
+    new["date"] = naive_dates(new["date"])
     merged = pd.concat([existing, new], ignore_index=True)
-    merged["date"] = pd.to_datetime(merged["date"])
+    merged["date"] = naive_dates(merged["date"])
     try:
         merged = _fill_gaps_from_intraday(group, tickers, merged)
     except Exception as e:  # noqa: BLE001
@@ -192,6 +205,7 @@ def _fill_gaps_from_intraday(group: str, tickers: list[str], merged: pd.DataFram
     if not rows:
         return merged
     fill = pd.DataFrame(rows)
+    fill["date"] = naive_dates(fill["date"])
     log.info("%s: filled %d bars from intraday", group, len(fill))
     # keep existing daily bars where present; only add missing (date, ticker) pairs
     key = merged.set_index(["date", "ticker"]).index

@@ -27,7 +27,7 @@ themes:
       US: [COHR, LITE, AAOI, CIEN, CRDO, ALAB, ANET, FN, MRVL, POET]
       JP: [5803.T, 5802.T, 5801.T, 6981.T]          # Fujikura, Sumitomo Electric, Furukawa Electric, Murata
       TW: [2345.TW, 3081.TWO, 4979.TWO, 3105.TWO, 6442.TW, 2383.TW]   # Accton, LandMark, Luxnet, VPEC, Kinko Optical, Elite Material
-      HK: [6869.HK, 1888.HK, 0877.HK]               # YOFC, Kingboard Laminates, O-Net
+      HK: [6869.HK, 1888.HK]                        # YOFC, Kingboard Laminates (O-Net 0877.HK delisted, removed 14 Oct)
       KR: [042700.KS]                                # Hanmi Semiconductor (TC bonders / packaging interconnect)
 
   memory_cycle:
@@ -116,7 +116,7 @@ themes:
     members:
       US: [CME, ICE, NDAQ, CBOE, HOOD, COIN, IBKR, SCHW, LPLA, PYPL, XYZ, SOFI, AFRM, FUTU, TIGR, MKTX, TW, VIRT]
       HK: [0388.HK, 6060.HK]                          # HKEX, ZhongAn
-      JP: [8697.T, 8473.T, 8698.T, 7342.T]            # JPX, SBI, Monex, WealthNavi
+      JP: [8697.T, 8473.T, 8698.T]                    # JPX, SBI, Monex (WealthNavi 7342.T delisted, removed 14 Oct)
       KR: [039490.KS, 323410.KS, 377300.KS]           # Kiwoom, KakaoBank, Kakaopay
 
   crypto_equities:

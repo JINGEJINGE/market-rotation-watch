@@ -107,7 +107,7 @@ def refresh_meta(tickers: list[str], force: bool = False, workers: int = 1, pace
 
 
 # ----------------------------------------------------------------------------- per-market lists
-def list_us() -> pd.DataFrame:
+def _list_sp500() -> pd.DataFrame:
     html = get("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies", ua=WIKI_UA, pause=1.0, retries=4).text
     tables = pd.read_html(io.StringIO(html))
     t = next(x for x in tables if "Symbol" in x.columns and "GICS Sector" in x.columns)
@@ -118,6 +118,47 @@ def list_us() -> pd.DataFrame:
         "source_index": "SP500",
     })
     assert 480 <= len(df) <= 520, f"S&P 500 table looks wrong: {len(df)} rows"
+    return df
+
+
+def _list_ndx() -> pd.DataFrame:
+    html = get("https://en.wikipedia.org/wiki/Nasdaq-100", ua=WIKI_UA, pause=1.0, retries=4).text
+    tables = pd.read_html(io.StringIO(html))
+    t = next(x for x in tables if any(c in x.columns for c in ("Ticker", "Symbol")) and 90 <= len(x) <= 110)
+    tick_col = "Ticker" if "Ticker" in t.columns else "Symbol"
+    name_col = next((c for c in ("Company", "Security", "Name") if c in t.columns), tick_col)
+    sec_col = next((c for c in t.columns if str(c).startswith("GICS Sector") or str(c) == "Sector"), None)
+    df = pd.DataFrame({
+        "ticker": t[tick_col].astype(str).str.replace(".", "-", regex=False).str.strip(),
+        "name": t[name_col],
+        "sector_local": t[sec_col] if sec_col is not None else None,
+        "source_index": "NDX",
+    })
+    assert 95 <= len(df) <= 110, f"Nasdaq-100 table looks wrong: {len(df)} rows"
+    return df
+
+
+def list_us() -> pd.DataFrame:
+    """S&P 500 ∪ Nasdaq-100, union by ticker; the GICS sector comes from the S&P table first, then the Nasdaq-100
+    table, then (in build_all) Yahoo's sector for names neither table tags with a GICS sector."""
+    sp = _list_sp500()
+    try:
+        ndx = _list_ndx()
+    except Exception as e:  # noqa: BLE001
+        log.warning("Nasdaq-100 list failed (%s) — keeping previous NDX-only names", e)
+        prev = UNIVERSE_DIR / "US.csv"
+        ndx = pd.DataFrame(columns=sp.columns)
+        if prev.exists():
+            old = pd.read_csv(prev, dtype={"ticker": str})
+            ndx = old.loc[old["source_index"].astype(str).str.contains("NDX"), ["ticker", "name", "sector_local", "source_index"]]
+    both = set(sp["ticker"]) & set(ndx["ticker"])
+    sp.loc[sp["ticker"].isin(both), "source_index"] = "SP500+NDX"
+    ndx_sector = ndx.set_index("ticker")["sector_local"]
+    sp["sector_local"] = sp["sector_local"].where(sp["sector_local"].notna(), sp["ticker"].map(ndx_sector))
+    df = pd.concat([sp, ndx[~ndx["ticker"].isin(both)].assign(source_index="NDX")], ignore_index=True)
+    df = df.drop_duplicates("ticker", keep="first").reset_index(drop=True)
+    log.info("US universe: %d S&P 500 + %d Nasdaq-100-only = %d", len(sp), len(df) - len(sp), len(df))
+    assert 500 <= len(df) <= 620, f"S&P 500 ∪ Nasdaq-100 looks wrong: {len(df)} rows"
     return df
 
 
@@ -280,6 +321,8 @@ def build_all(markets: list[str] | None = None, force_meta: bool = False) -> dic
             df["sector"] = df["ticker"].map(meta["sector_yahoo"]).map(lambda s: harmonise_sector("YAHOO", s))
         else:
             df["sector"] = df["sector_local"].map(lambda s: harmonise_sector(scheme, s))
+            # names without a usable local tag (e.g. Nasdaq-100-only listings) fall back to Yahoo's sector
+            df["sector"] = df["sector"].fillna(df["ticker"].map(meta["sector_yahoo"]).map(lambda s: harmonise_sector("YAHOO", s)))
         df["mcap_local"] = df["ticker"].map(meta["mcap"])
         df["shares"] = df["ticker"].map(meta["shares"])
         if mkt == "KR" and "mcap_naver_100m" in df.columns:

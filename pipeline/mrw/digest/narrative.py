@@ -16,6 +16,10 @@ Rules:
 - Then: where capital is rotating in and out, and whether each move is CONFIRMED (turnover share rising, flows
   supportive, breadth participating, beta-adjusted residual positive) or UNCONFIRMED (price only, thin turnover,
   concentrated in one or two names). Say which.
+- Scorecard weighting: when you lean on a signal (composite crossing, RRG entry), cite its 5-day hit rate and n
+  from the scorecard table for that signal type and market, and call any signal with a hit rate below 50% an
+  "unconfirmed signal". Baskets listed as excluded (fewer than 5 names, or one name over 60% of the move) are
+  not rotations — mention them only as such.
 - Cross-market: what the lead-lag table implies for the next session, or whether Asia followed the US move.
 - End with 2-3 things to watch next session. No disclaimers, no hedging boilerplate, no bullet spam: short paragraphs.
 - 220-320 words. Plain English. Numbers as in the tables (percentages with sign)."""

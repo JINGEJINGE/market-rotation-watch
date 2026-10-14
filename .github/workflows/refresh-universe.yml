@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 2 1 * *"   # 1st of month, 10:00 Singapore
   workflow_dispatch:
+    inputs:
+      markets:
+        description: "Markets to rebuild, comma-separated (blank = all). Use US after the S&P 500 ∪ Nasdaq-100 change."
+        required: false
+        default: ""
 
 concurrency:
   group: mrw-pipeline
@@ -24,7 +29,16 @@ jobs:
           cache-dependency-path: pipeline/requirements.txt
       - run: pip install -r pipeline/requirements.txt
       - name: Rebuild universes and metadata
-        run: cd pipeline && python run.py --universe
+        run: |
+          cd pipeline
+          if [ -n "${{ github.event.inputs.markets }}" ]; then
+            python run.py --universe --markets "${{ github.event.inputs.markets }}"
+          else
+            python run.py --universe
+          fi
+      - name: Refresh US earnings calendar
+        continue-on-error: true
+        run: cd pipeline && python run.py --earnings
       - name: Commit
         run: |
           git config user.name "mrw-bot"

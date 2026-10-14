@@ -10,7 +10,8 @@ markets:
     tz: America/New_York
     session: us               # which run this market "belongs" to
     sector_scheme: GICS
-    universe: sp500
+    universe: sp500_ndx       # S&P 500 ∪ Nasdaq-100 (benchmark stays the S&P 500)
+    universe_name: "S&P 500 ∪ Nasdaq-100"
   KR:
     name: Korea
     benchmark: ^KS11
@@ -22,6 +23,7 @@ markets:
     session: asia
     sector_scheme: YAHOO
     universe: kospi200
+    universe_name: "KOSPI 200"
   HK:
     name: Hong Kong
     benchmark: ^HSI
@@ -33,6 +35,7 @@ markets:
     session: asia
     sector_scheme: YAHOO
     universe: hk_core
+    universe_name: "HSI ∪ HSTECH ∪ HSCEI"
   JP:
     name: Japan
     benchmark: 1306.T         # TOPIX ETF as TOPIX proxy (^N225 is price-weighted and distorted)
@@ -44,6 +47,7 @@ markets:
     session: asia
     sector_scheme: JPX17
     universe: topix500
+    universe_name: "TOPIX 500"
   TW:
     name: Taiwan
     benchmark: ^TWII
@@ -55,6 +59,7 @@ markets:
     session: asia
     sector_scheme: YAHOO
     universe: tw150
+    universe_name: "TWSE top 150"
 
 # Reference tickers downloaded alongside (not part of any universe)
 reference:
