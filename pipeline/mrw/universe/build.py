@@ -122,9 +122,14 @@ def _list_sp500() -> pd.DataFrame:
 
 
 def _list_ndx() -> pd.DataFrame:
-    html = get("https://en.wikipedia.org/wiki/Nasdaq-100", ua=WIKI_UA, pause=1.0, retries=4).text
+    # components table: Ticker / Company / ICB Industry / ICB Subsector (no GICS column, so Nasdaq-100-only
+    # names take Yahoo's sector in build_all)
+    html = get("https://en.wikipedia.org/wiki/List_of_NASDAQ-100_companies", ua=WIKI_UA, pause=1.0, retries=4).text
     tables = pd.read_html(io.StringIO(html))
-    t = next(x for x in tables if any(c in x.columns for c in ("Ticker", "Symbol")) and 90 <= len(x) <= 110)
+    t = next((x for x in tables if any(c in x.columns for c in ("Ticker", "Symbol")) and 90 <= len(x) <= 110), None)
+    if t is None:
+        raise RuntimeError(f"no Nasdaq-100 components table among {len(tables)} tables: "
+                           f"{[(list(x.columns)[:4], len(x)) for x in tables][:8]}")
     tick_col = "Ticker" if "Ticker" in t.columns else "Symbol"
     name_col = next((c for c in ("Company", "Security", "Name") if c in t.columns), tick_col)
     sec_col = next((c for c in t.columns if str(c).startswith("GICS Sector") or str(c) == "Sector"), None)
