@@ -4,13 +4,13 @@ AOS,A. O. Smith,US,Industrials,Industrials,7692425216.0,110047214.0,SP500
 ABT,Abbott Laboratories,US,Health Care,Health Care,176187637760.0,1730383296.0,SP500
 ABBV,AbbVie,US,Health Care,Health Care,496772022272.0,1767117285.0,SP500
 ACN,Accenture,US,Information Technology,Information Technology,131487989760.0,611942109.0,SP500
-ADBE,Adobe Inc.,US,Information Technology,Information Technology,92684091392.0,389200000.0,SP500
-AMD,Advanced Micro Devices,US,Information Technology,Information Technology,970081959936.0,1632475042.0,SP500
+ADBE,Adobe Inc.,US,Information Technology,Information Technology,92684091392.0,389200000.0,SP500+NDX
+AMD,Advanced Micro Devices,US,Information Technology,Information Technology,970081959936.0,1632475042.0,SP500+NDX
 AES,AES Corporation,US,Utilities,Utilities,10687310848.0,713438630.0,SP500
 AFL,Aflac,US,Financials,Financials,58100674560.0,501343298.0,SP500
 A,Agilent Technologies,US,Health Care,Health Care,48309207040.0,281965813.0,SP500
 APD,Air Products,US,Materials,Materials,63213740032.0,222685530.0,SP500
-ABNB,Airbnb,US,Consumer Discretionary,Consumer Discretionary,97901453312.0,419529556.0,SP500
+ABNB,Airbnb,US,Consumer Discretionary,Consumer Discretionary,97901453312.0,419529556.0,SP500+NDX
 AKAM,Akamai Technologies,US,Information Technology,Information Technology,14608793600.0,143716609.0,SP500
 ALB,Albemarle Corporation,US,Materials,Materials,11624678400.0,118005057.0,SP500
 ARE,Alexandria Real Estate Equities,US,Real Estate,Real Estate,7592843776.0,172095277.0,SP500
@@ -18,28 +18,28 @@ ALGN,Align Technology,US,Health Care,Health Care,9975416832.0,71039852.0,SP500
 ALLE,Allegion,US,Industrials,Industrials,12758918144.0,85036786.0,SP500
 LNT,Alliant Energy,US,Utilities,Utilities,17232060416.0,259284699.0,SP500
 ALL,Allstate,US,Financials,Financials,58814763008.0,252857950.0,SP500
-GOOGL,Alphabet Inc. (Class A),US,Communication Services,Communication Services,4313742835712.0,5867155790.0,SP500
-GOOG,Alphabet Inc. (Class C),US,Communication Services,Communication Services,4267880480768.0,5527000000.0,SP500
+GOOGL,Alphabet Inc. (Class A),US,Communication Services,Communication Services,4313742835712.0,5867155790.0,SP500+NDX
+GOOG,Alphabet Inc. (Class C),US,Communication Services,Communication Services,4267880480768.0,5527000000.0,SP500+NDX
 MO,Altria,US,Consumer Staples,Consumer Staples,119653851136.0,1669743926.0,SP500
-AMZN,Amazon,US,Consumer Discretionary,Consumer Discretionary,2799371812864.0,10786313572.0,SP500
+AMZN,Amazon,US,Consumer Discretionary,Consumer Discretionary,2799371812864.0,10786313572.0,SP500+NDX
 AMCR,Amcor,US,Materials,Materials,19207702528.0,461945690.0,SP500
 AEE,Ameren,US,Utilities,Utilities,28581298176.0,276843251.0,SP500
-AEP,American Electric Power,US,Utilities,Utilities,67630489600.0,544397352.0,SP500
+AEP,American Electric Power,US,Utilities,Utilities,67630489600.0,544397352.0,SP500+NDX
 AXP,American Express,US,Financials,Financials,210379276288.0,675309833.0,SP500
 AIG,American International Group,US,Financials,Financials,40628797440.0,522893169.0,SP500
 AMT,American Tower,US,Real Estate,Real Estate,85065670656.0,465960048.0,SP500
 AWK,American Water Works,US,Utilities,Utilities,25745342464.0,198728989.0,SP500
 AMP,Ameriprise Financial,US,Financials,Financials,44168372224.0,88333219.0,SP500
 AME,Ametek,US,Industrials,Industrials,57290092544.0,229261244.0,SP500
-AMGN,Amgen,US,Health Care,Health Care,225751711744.0,540632005.0,SP500
+AMGN,Amgen,US,Health Care,Health Care,225751711744.0,540632005.0,SP500+NDX
 APH,Amphenol,US,Information Technology,Information Technology,212541685760.0,2465966914.0,SP500
-ADI,Analog Devices,US,Information Technology,Information Technology,196852301824.0,484565465.0,SP500
+ADI,Analog Devices,US,Information Technology,Information Technology,196852301824.0,484565465.0,SP500+NDX
 AON,Aon plc,US,Financials,Financials,58287828992.0,212125434.0,SP500
 APA,APA Corporation,US,Energy,Energy,16410465280.0,350351510.0,SP500
 APO,Apollo Global Management,US,Financials,Financials,70404554752.0,590543159.0,SP500
-AAPL,Apple Inc.,US,Information Technology,Information Technology,4976177840128.0,14594180000.0,SP500
-AMAT,Applied Materials,US,Information Technology,Information Technology,394838540288.0,793597443.0,SP500
-APP,AppLovin,US,Communication Services,Communication Services,90995933184.0,305732000.0,SP500
+AAPL,Apple Inc.,US,Information Technology,Information Technology,4976177840128.0,14594180000.0,SP500+NDX
+AMAT,Applied Materials,US,Information Technology,Information Technology,394838540288.0,793597443.0,SP500+NDX
+APP,AppLovin,US,Communication Services,Communication Services,90995933184.0,305732000.0,SP500+NDX
 APTV,Aptiv,US,Consumer Discretionary,Consumer Discretionary,9042430976.0,207633331.0,SP500
 ACGL,Arch Capital Group,US,Financials,Financials,33153822720.0,341229126.0,SP500
 ADM,Archer Daniels Midland,US,Consumer Staples,Consumer Staples,38759190528.0,481959583.0,SP500
@@ -49,12 +49,12 @@ AJG,Arthur J. Gallagher & Co.,US,Financials,Financials,59963285504.0,256341000.0
 AIZ,Assurant,US,Financials,Financials,13249844224.0,49323767.0,SP500
 T,AT&T,US,Communication Services,Communication Services,154110148608.0,6852385650.0,SP500
 ATO,Atmos Energy,US,Utilities,Utilities,27440363520.0,168988553.0,SP500
-ADSK,Autodesk,US,Information Technology,Information Technology,48809857024.0,209000000.0,SP500
-ADP,Automatic Data Processing,US,Industrials,Industrials,108497633280.0,396251548.0,SP500
+ADSK,Autodesk,US,Information Technology,Information Technology,48809857024.0,209000000.0,SP500+NDX
+ADP,Automatic Data Processing,US,Industrials,Industrials,108497633280.0,396251548.0,SP500+NDX
 AZO,AutoZone,US,Consumer Discretionary,Consumer Discretionary,46883102720.0,16173000.0,SP500
 AVY,Avery Dennison,US,Materials,Materials,12705882112.0,75788142.0,SP500
-AXON,Axon Enterprise,US,Industrials,Industrials,33667221504.0,81237415.0,SP500
-BKR,Baker Hughes,US,Energy,Energy,55768428544.0,992674071.0,SP500
+AXON,Axon Enterprise,US,Industrials,Industrials,33667221504.0,81237415.0,SP500+NDX
+BKR,Baker Hughes,US,Energy,Energy,55768428544.0,992674071.0,SP500+NDX
 BALL,Ball Corporation,US,Materials,Materials,15667791872.0,264703357.0,SP500
 BAC,Bank of America,US,Financials,Financials,381664231424.0,6992748365.0,SP500
 BAX,Baxter International,US,Health Care,Health Care,12811161600.0,516995999.0,SP500
@@ -69,17 +69,17 @@ XYZ,"Block, Inc.",US,Financials,Financials,46153072640.0,540816000.0,SP500
 BE,Bloom Energy,US,Industrials,Industrials,77248634880.0,294527346.0,SP500
 BNY,BNY Mellon,US,Financials,Financials,96924319744.0,678504142.0,SP500
 BA,Boeing,US,Industrials,Industrials,149775122432.0,790370020.0,SP500
-BKNG,Booking Holdings,US,Consumer Discretionary,Consumer Discretionary,119041204224.0,751380500.0,SP500
+BKNG,Booking Holdings,US,Consumer Discretionary,Consumer Discretionary,119041204224.0,751380500.0,SP500+NDX
 BSX,Boston Scientific,US,Health Care,Health Care,63534223360.0,1449229526.0,SP500
 BMY,Bristol Myers Squibb,US,Health Care,Health Care,117619515392.0,2042714656.0,SP500
-AVGO,Broadcom,US,Information Technology,Information Technology,1693349838848.0,4773629865.0,SP500
+AVGO,Broadcom,US,Information Technology,Information Technology,1693349838848.0,4773629865.0,SP500+NDX
 BR,Broadridge Financial Solutions,US,Industrials,Industrials,18787694592.0,112900032.0,SP500
 BRO,Brown & Brown,US,Financials,Financials,21297950720.0,334610357.0,SP500
 BF-B,Brown–Forman,US,Consumer Staples,Consumer Staples,12302150656.0,290383416.0,SP500
 BG,Bunge Global,US,Consumer Staples,Consumer Staples,20022654976.0,192119123.0,SP500
 BXP,"BXP, Inc.",US,Real Estate,Real Estate,10771250176.0,159661556.0,SP500
 CHRW,C.H. Robinson,US,Industrials,Industrials,16301620224.0,116648446.0,SP500
-CDNS,Cadence Design Systems,US,Information Technology,Information Technology,95952429056.0,275393000.0,SP500
+CDNS,Cadence Design Systems,US,Information Technology,Information Technology,95952429056.0,275393000.0,SP500+NDX
 CPT,Camden Property Trust,US,Real Estate,Real Estate,11295499264.0,115732578.0,SP500
 COF,Capital One,US,Financials,Financials,123396341760.0,613484836.0,SP500
 CAH,Cardinal Health,US,Health Care,Health Care,55129649152.0,231559345.0,SP500
@@ -105,8 +105,8 @@ CHD,Church & Dwight,US,Consumer Staples,Consumer Staples,23689553920.0,237203907
 CIEN,Ciena,US,Information Technology,Information Technology,57433874432.0,141808525.0,SP500
 CI,Cigna,US,Health Care,Health Care,74869899264.0,264240486.0,SP500
 CINF,Cincinnati Financial,US,Financials,Financials,25408290816.0,153478045.0,SP500
-CTAS,Cintas,US,Industrials,Industrials,81491722240.0,397075093.0,SP500
-CSCO,Cisco,US,Information Technology,Information Technology,454737952768.0,3942586873.0,SP500
+CTAS,Cintas,US,Industrials,Industrials,81491722240.0,397075093.0,SP500+NDX
+CSCO,Cisco,US,Information Technology,Information Technology,454737952768.0,3942586873.0,SP500+NDX
 C,Citigroup,US,Financials,Financials,221287464960.0,1677436783.0,SP500
 CFG,Citizens Financial Group,US,Financials,Financials,26913198080.0,421176788.0,SP500
 CLX,Clorox,US,Consumer Staples,Consumer Staples,10201136128.0,120938184.0,SP500
@@ -117,41 +117,41 @@ CTSH,Cognizant,US,Information Technology,Information Technology,26882510848.0,45
 COHR,Coherent Corp.,US,Information Technology,Information Technology,56720113664.0,196931166.0,SP500
 COIN,Coinbase,US,Financials,Financials,47593541632.0,222803032.0,SP500
 CL,Colgate-Palmolive,US,Consumer Staples,Consumer Staples,71729610752.0,797172829.0,SP500
-CMCSA,Comcast,US,Communication Services,Communication Services,73385803776.0,3539192198.0,SP500
+CMCSA,Comcast,US,Communication Services,Communication Services,73385803776.0,3539192198.0,SP500+NDX
 FIX,Comfort Systems USA,US,Industrials,Industrials,57650069504.0,35194329.0,SP500
 COP,ConocoPhillips,US,Energy,Energy,165255987200.0,1201337479.0,SP500
 ED,Consolidated Edison,US,Utilities,Utilities,39645630464.0,369828633.0,SP500
 STZ,Constellation Brands,US,Consumer Staples,Consumer Staples,21389942784.0,169198487.0,SP500
-CEG,Constellation Energy,US,Utilities,Utilities,104127406080.0,354307379.0,SP500
+CEG,Constellation Energy,US,Utilities,Utilities,104127406080.0,354307379.0,SP500+NDX
 COO,Cooper Companies (The),US,Health Care,Health Care,10562176000.0,190155294.0,SP500
-CPRT,Copart,US,Industrials,Industrials,24529229824.0,926330452.0,SP500
+CPRT,Copart,US,Industrials,Industrials,24529229824.0,926330452.0,SP500+NDX
 GLW,Corning Inc.,US,Information Technology,Information Technology,126865276928.0,861388331.0,SP500
 CPAY,Corpay,US,Financials,Financials,26110853120.0,65659599.0,SP500
 CSGP,CoStar Group,US,Real Estate,Real Estate,11835821056.0,405197588.0,SP500
-COST,Costco,US,Consumer Staples,Consumer Staples,425156018176.0,443129349.0,SP500
+COST,Costco,US,Consumer Staples,Consumer Staples,425156018176.0,443129349.0,SP500+NDX
 CRH,CRH plc,US,Materials,Materials,53921308672.0,665284511.0,SP500
-CRWD,CrowdStrike,US,Information Technology,Information Technology,269305118720.0,1023934842.0,SP500
+CRWD,CrowdStrike,US,Information Technology,Information Technology,269305118720.0,1023934842.0,SP500+NDX
 CCI,Crown Castle,US,Real Estate,Real Estate,35401371648.0,437000000.0,SP500
-CSX,CSX Corporation,US,Industrials,Industrials,88455675904.0,1852474917.0,SP500
+CSX,CSX Corporation,US,Industrials,Industrials,88455675904.0,1852474917.0,SP500+NDX
 CMI,Cummins,US,Industrials,Industrials,72667570176.0,137664487.0,SP500
 CVS,CVS Health,US,Health Care,Health Care,112216858624.0,1278970369.0,SP500
 DHR,Danaher Corporation,US,Health Care,Health Care,155500511232.0,702986054.0,SP500
 DRI,Darden Restaurants,US,Consumer Discretionary,Consumer Discretionary,22584518656.0,113143224.0,SP500
-DDOG,Datadog,US,Information Technology,Information Technology,103158661120.0,334904614.0,SP500
+DDOG,Datadog,US,Information Technology,Information Technology,103158661120.0,334904614.0,SP500+NDX
 DVA,DaVita,US,Health Care,Health Care,11597563904.0,63800000.0,SP500
 DECK,Deckers Brands,US,Consumer Discretionary,Consumer Discretionary,11476044800.0,136181857.0,SP500
 DE,Deere & Company,US,Industrials,Industrials,170567729152.0,269625412.0,SP500
 DELL,Dell Technologies,US,Information Technology,Information Technology,366711373824.0,315433188.0,SP500
 DAL,Delta Air Lines,US,Industrials,Industrials,52682182656.0,657623030.0,SP500
 DVN,Devon Energy,US,Energy,Energy,53855997952.0,1100000000.0,SP500
-DXCM,Dexcom,US,Health Care,Health Care,32422836224.0,377360765.0,SP500
-FANG,Diamondback Energy,US,Energy,Energy,54634659840.0,280019792.0,SP500
+DXCM,Dexcom,US,Health Care,Health Care,32422836224.0,377360765.0,SP500+NDX
+FANG,Diamondback Energy,US,Energy,Energy,54634659840.0,280019792.0,SP500+NDX
 DLR,Digital Realty,US,Real Estate,Real Estate,68039897088.0,370998727.0,SP500
 DG,Dollar General,US,Consumer Staples,Consumer Staples,27916847104.0,220616790.0,SP500
 DLTR,Dollar Tree,US,Consumer Staples,Consumer Staples,22067200000.0,187630299.0,SP500
 D,Dominion Energy,US,Utilities,Utilities,54926397440.0,879525949.0,SP500
 DPZ,Domino's,US,Consumer Discretionary,Consumer Discretionary,10285111296.0,33081735.0,SP500
-DASH,DoorDash,US,Consumer Discretionary,Consumer Discretionary,84163796992.0,409082893.0,SP500
+DASH,DoorDash,US,Consumer Discretionary,Consumer Discretionary,84163796992.0,409082893.0,SP500+NDX
 DOV,Dover Corporation,US,Industrials,Industrials,25707761664.0,134680225.0,SP500
 DOW,Dow Inc.,US,Materials,Materials,20312221696.0,722340711.0,SP500
 DHI,D. R. Horton,US,Consumer Discretionary,Consumer Discretionary,37561081856.0,279701267.0,SP500
@@ -179,7 +179,7 @@ EG,Everest Group,US,Financials,Financials,14283819008.0,38342734.0,SP500
 EVRG,Evergy,US,Utilities,Utilities,18791223296.0,230567172.0,SP500
 P,Everpure,US,Information Technology,Information Technology,51753525248.0,333227251.0,SP500
 ES,Eversource Energy,US,Utilities,Utilities,24898199552.0,376674754.0,SP500
-EXC,Exelon,US,Utilities,Utilities,43394293760.0,1030253967.0,SP500
+EXC,Exelon,US,Utilities,Utilities,43394293760.0,1030253967.0,SP500+NDX
 EXE,Expand Energy,US,Energy,Energy,20559851520.0,231503789.0,SP500
 EXPE,Expedia Group,US,Consumer Discretionary,Consumer Discretionary,32222328832.0,114498625.0,SP500
 EXPD,Expeditors International,US,Industrials,Industrials,25141487616.0,129990622.0,SP500
@@ -188,7 +188,7 @@ XOM,ExxonMobil,US,Energy,Energy,707865608192.0,4111911960.0,SP500
 FFIV,"F5, Inc.",US,Information Technology,Information Technology,26812405760.0,56627182.0,SP500
 FDS,FactSet,US,Financials,Financials,10266705920.0,35565543.0,SP500
 FICO,Fair Isaac,US,Information Technology,Information Technology,15982251008.0,21597635.0,SP500
-FAST,Fastenal,US,Industrials,Industrials,59084652544.0,1147497573.0,SP500
+FAST,Fastenal,US,Industrials,Industrials,59084652544.0,1147497573.0,SP500+NDX
 FRT,Federal Realty Investment Trust,US,Real Estate,Real Estate,9303059456.0,86889133.0,SP500
 FDX,FedEx,US,Industrials,Industrials,69162205184.0,236670435.0,SP500
 FDXF,FedEx Freight,US,Industrials,Industrials,16913490944.0,149518133.0,SP500
@@ -200,7 +200,7 @@ FE,FirstEnergy,US,Utilities,Utilities,26247108608.0,578639932.0,SP500
 FISV,Fiserv,US,Financials,Financials,24812234752.0,531766721.0,SP500
 FLEX,Flex Ltd.,US,Information Technology,Information Technology,43315544064.0,369460443.0,SP500
 F,Ford Motor Company,US,Consumer Discretionary,Consumer Discretionary,47851151360.0,3916743591.0,SP500
-FTNT,Fortinet,US,Information Technology,Information Technology,141562707968.0,733713653.0,SP500
+FTNT,Fortinet,US,Information Technology,Information Technology,141562707968.0,733713653.0,SP500+NDX
 FTV,Fortive,US,Industrials,Industrials,17326718976.0,302017052.0,SP500
 FOXA,Fox Corporation (Class A),US,Communication Services,Communication Services,26392553472.0,201424858.0,SP500
 FOX,Fox Corporation (Class B),US,Communication Services,Communication Services,23605288960.0,220248764.0,SP500
@@ -209,7 +209,7 @@ FCX,Freeport-McMoRan,US,Materials,Materials,105245728768.0,1436017523.0,SP500
 GRMN,Garmin,US,Consumer Discretionary,Consumer Discretionary,51445346304.0,192852536.0,SP500
 IT,Gartner,US,Information Technology,Information Technology,12257216512.0,63148976.0,SP500
 GE,GE Aerospace,US,Industrials,Industrials,320233308160.0,1037562513.0,SP500
-GEHC,GE HealthCare,US,Health Care,Health Care,30597224448.0,451686252.0,SP500
+GEHC,GE HealthCare,US,Health Care,Health Care,30597224448.0,451686252.0,SP500+NDX
 GEV,GE Vernova,US,Industrials,Industrials,265481306112.0,266333581.0,SP500
 GEN,Gen Digital,US,Information Technology,Information Technology,13977007104.0,598587032.0,SP500
 GNRC,Generac,US,Industrials,Industrials,12897790976.0,59063935.0,SP500
@@ -217,7 +217,7 @@ GD,General Dynamics,US,Industrials,Industrials,90761109504.0,270557195.0,SP500
 GIS,General Mills,US,Consumer Staples,Consumer Staples,17484269568.0,534687144.0,SP500
 GM,General Motors,US,Consumer Discretionary,Consumer Discretionary,72275681280.0,877451541.0,SP500
 GPC,Genuine Parts Company,US,Consumer Discretionary,Consumer Discretionary,17869381632.0,137859758.0,SP500
-GILD,Gilead Sciences,US,Health Care,Health Care,186526449664.0,1239955155.0,SP500
+GILD,Gilead Sciences,US,Health Care,Health Care,186526449664.0,1239955155.0,SP500+NDX
 GPN,Global Payments,US,Financials,Financials,21714583552.0,264618390.0,SP500
 GL,Globe Life,US,Financials,Financials,12689380352.0,76849447.0,SP500
 GDDY,GoDaddy,US,Information Technology,Information Technology,12958593024.0,126647704.0,SP500
@@ -232,8 +232,8 @@ HSY,Hershey Company (The),US,Consumer Staples,Consumer Staples,32919660544.0,146
 HPE,Hewlett Packard Enterprise,US,Information Technology,Information Technology,93360603136.0,1327464779.0,SP500
 HLT,Hilton Worldwide,US,Consumer Discretionary,Consumer Discretionary,73717760000.0,225064910.0,SP500
 HD,Home Depot (The),US,Consumer Discretionary,Consumer Discretionary,289948532736.0,997689626.0,SP500
-HONA,Honeywell Aerospace,US,Industrials,Industrials,49847156736.0,316952725.0,SP500
-HON,Honeywell Technologies,US,Industrials,Industrials,66443300864.0,316940010.0,SP500
+HONA,Honeywell Aerospace,US,Industrials,Industrials,49847156736.0,316952725.0,SP500+NDX
+HON,Honeywell Technologies,US,Industrials,Industrials,66443300864.0,316940010.0,SP500+NDX
 HRL,Hormel Foods,US,Consumer Staples,Consumer Staples,10621769728.0,550350800.0,SP500
 HST,Host Hotels & Resorts,US,Real Estate,Real Estate,15798079488.0,685124399.0,SP500
 HWM,Howmet Aerospace,US,Industrials,Industrials,88059338752.0,398801399.0,SP500
@@ -244,19 +244,19 @@ HBAN,Huntington Bancshares,US,Financials,Financials,31114387456.0,2020414826.0,S
 HII,Huntington Ingalls Industries,US,Industrials,Industrials,10403996672.0,39404598.0,SP500
 IBM,IBM,US,Information Technology,Information Technology,213883355136.0,942134390.0,SP500
 IEX,IDEX Corporation,US,Industrials,Industrials,17380939776.0,73719896.0,SP500
-IDXX,Idexx Laboratories,US,Health Care,Health Care,41276579840.0,78781116.0,SP500
+IDXX,Idexx Laboratories,US,Health Care,Health Care,41276579840.0,78781116.0,SP500+NDX
 ITW,Illinois Tool Works,US,Industrials,Industrials,75503321088.0,284800000.0,SP500
 ILMN,"Illumina, Inc.",US,Health Care,Health Care,41777172480.0,151000000.0,SP500
 INCY,Incyte,US,Health Care,Health Care,22572421120.0,202697746.0,SP500
 IR,Ingersoll Rand,US,Industrials,Industrials,30686873600.0,387999429.0,SP500
 PODD,Insulet Corporation,US,Health Care,Health Care,9696410624.0,69354199.0,SP500
-INTC,Intel,US,Information Technology,Information Technology,535746740224.0,5286105262.0,SP500
+INTC,Intel,US,Information Technology,Information Technology,535746740224.0,5286105262.0,SP500+NDX
 IBKR,Interactive Brokers,US,Financials,Financials,149748350976.0,453077771.0,SP500
 ICE,Intercontinental Exchange,US,Financials,Financials,88374722560.0,561394487.0,SP500
 IFF,International Flavors & Fragrances,US,Materials,Materials,21677541376.0,255149963.0,SP500
 IP,International Paper,US,Materials,Materials,16808548352.0,529569895.0,SP500
-INTU,Intuit,US,Information Technology,Information Technology,81771544576.0,267236000.0,SP500
-ISRG,Intuitive Surgical,US,Health Care,Health Care,151075831808.0,353278038.0,SP500
+INTU,Intuit,US,Information Technology,Information Technology,81771544576.0,267236000.0,SP500+NDX
+ISRG,Intuitive Surgical,US,Health Care,Health Care,151075831808.0,353278038.0,SP500+NDX
 IVZ,Invesco,US,Financials,Financials,12918283264.0,441499780.0,SP500
 INVH,Invitation Homes,US,Real Estate,Real Estate,15769640960.0,590623226.0,SP500
 IQV,IQVIA,US,Health Care,Health Care,43159764992.0,164600000.0,SP500
@@ -269,38 +269,38 @@ JNJ,Johnson & Johnson,US,Health Care,Health Care,635562557440.0,2409898597.0,SP5
 JCI,Johnson Controls,US,Industrials,Industrials,94138277888.0,605741470.0,SP500
 JPM,JPMorgan Chase,US,Financials,Financials,888631656448.0,2658186195.0,SP500
 KVUE,Kenvue,US,Consumer Staples,Consumer Staples,34247391232.0,1920773467.0,SP500
-KDP,Keurig Dr Pepper,US,Consumer Staples,Consumer Staples,44567052288.0,1360826038.0,SP500
+KDP,Keurig Dr Pepper,US,Consumer Staples,Consumer Staples,44567052288.0,1360826038.0,SP500+NDX
 KEY,KeyCorp,US,Financials,Financials,21438613504.0,1067128554.0,SP500
 KEYS,Keysight Technologies,US,Information Technology,Information Technology,64301445120.0,170244745.0,SP500
 KMB,Kimberly-Clark,US,Consumer Staples,Consumer Staples,32848830464.0,332579038.0,SP500
 KIM,Kimco Realty,US,Real Estate,Real Estate,14972018688.0,670789373.0,SP500
 KMI,Kinder Morgan,US,Energy,Energy,73662619648.0,2226802089.0,SP500
 KKR,KKR & Co.,US,Financials,Financials,84517773312.0,897635601.0,SP500
-KLAC,KLA Corporation,US,Information Technology,Information Technology,248107827200.0,1305006492.0,SP500
+KLAC,KLA Corporation,US,Information Technology,Information Technology,248107827200.0,1305006492.0,SP500+NDX
 KHC,Kraft Heinz,US,Consumer Staples,Consumer Staples,26621743104.0,1185823758.0,SP500
 KR,Kroger,US,Consumer Staples,Consumer Staples,36947226624.0,590588700.0,SP500
 LHX,L3Harris,US,Industrials,Industrials,44365635584.0,186214616.0,SP500
 LH,Labcorp,US,Health Care,Health Care,25588670464.0,81100000.0,SP500
-LRCX,Lam Research,US,Information Technology,Information Technology,387390930944.0,1251424362.0,SP500
+LRCX,Lam Research,US,Information Technology,Information Technology,387390930944.0,1251424362.0,SP500+NDX
 LVS,Las Vegas Sands,US,Consumer Discretionary,Consumer Discretionary,23414398976.0,647701184.0,SP500
 LDOS,Leidos,US,Industrials,Industrials,15259852800.0,125492209.0,SP500
 LEN,Lennar,US,Consumer Discretionary,Consumer Discretionary,17759252480.0,207876222.0,SP500
 LII,Lennox International,US,Industrials,Industrials,12328484864.0,34560675.0,SP500
 LLY,Lilly (Eli),US,Health Care,Health Care,1054591156224.0,891741406.0,SP500
-LIN,Linde plc,US,Materials,Materials,224658685952.0,460980163.0,SP500
+LIN,Linde plc,US,Materials,Materials,224658685952.0,460980163.0,SP500+NDX
 LYV,Live Nation Entertainment,US,Communication Services,Communication Services,39519248384.0,232959505.0,SP500
 LMT,Lockheed Martin,US,Industrials,Industrials,118137167872.0,230790753.0,SP500
 L,Loews Corporation,US,Financials,Financials,22033217536.0,204427720.0,SP500
 LOW,Lowe's,US,Consumer Discretionary,Consumer Discretionary,104114798592.0,561054019.0,SP500
 LULU,Lululemon Athletica,US,Consumer Discretionary,Consumer Discretionary,10964087808.0,105594064.0,SP500
-LITE,Lumentum,US,Information Technology,Information Technology,90167074816.0,90582856.0,SP500
+LITE,Lumentum,US,Information Technology,Information Technology,90167074816.0,90582856.0,SP500+NDX
 LYB,LyondellBasell,US,Materials,Materials,19191685120.0,323037952.0,SP500
 MTB,M&T Bank,US,Financials,Financials,31755689984.0,144416262.0,SP500
 MPC,Marathon Petroleum,US,Energy,Energy,128845209600.0,280824763.0,SP500
-MAR,Marriott International,US,Consumer Discretionary,Consumer Discretionary,96300990464.0,260766288.0,SP500
+MAR,Marriott International,US,Consumer Discretionary,Consumer Discretionary,96300990464.0,260766288.0,SP500+NDX
 MRSH,Marsh McLennan,US,Financials,Financials,84246872064.0,477211268.0,SP500
 MLM,Martin Marietta Materials,US,Materials,Materials,33889030144.0,71019382.0,SP500
-MRVL,Marvell Technology,US,Information Technology,Information Technology,238929608704.0,876926613.0,SP500
+MRVL,Marvell Technology,US,Information Technology,Information Technology,238929608704.0,876926613.0,SP500+NDX
 MAS,Masco,US,Industrials,Industrials,13601989632.0,197187430.0,SP500
 MA,Mastercard,US,Financials,Financials,521304768512.0,869464115.0,SP500
 MKC,McCormick & Company,US,Consumer Staples,Consumer Staples,12263959552.0,254541615.0,SP500
@@ -308,18 +308,18 @@ MCD,McDonald's,US,Consumer Discretionary,Consumer Discretionary,166755729408.0,7
 MCK,McKesson,US,Health Care,Health Care,111432400896.0,116590363.0,SP500
 MDT,Medtronic,US,Health Care,Health Care,117591146496.0,1279137890.0,SP500
 MRK,Merck & Co.,US,Health Care,Health Care,358850101248.0,2467171638.0,SP500
-META,Meta Platforms,US,Communication Services,Communication Services,1892695277568.0,2205128509.0,SP500
+META,Meta Platforms,US,Communication Services,Communication Services,1892695277568.0,2205128509.0,SP500+NDX
 MET,MetLife,US,Financials,Financials,63655723008.0,635476927.0,SP500
 MTD,Mettler Toledo,US,Health Care,Health Care,31317344256.0,20036559.0,SP500
 MGM,MGM Resorts,US,Consumer Discretionary,Consumer Discretionary,7501558272.0,255851235.0,SP500
-MCHP,Microchip Technology,US,Information Technology,Information Technology,40090333184.0,543008691.0,SP500
-MU,Micron Technology,US,Information Technology,Information Technology,1119022743552.0,1131423212.0,SP500
-MSFT,Microsoft,US,Information Technology,Information Technology,4018334334976.0,7425545491.0,SP500
+MCHP,Microchip Technology,US,Information Technology,Information Technology,40090333184.0,543008691.0,SP500+NDX
+MU,Micron Technology,US,Information Technology,Information Technology,1119022743552.0,1131423212.0,SP500+NDX
+MSFT,Microsoft,US,Information Technology,Information Technology,4018334334976.0,7425545491.0,SP500+NDX
 MAA,Mid-America Apartment Communities,US,Real Estate,Real Estate,13862850560.0,116021957.0,SP500
-MRNA,Moderna,US,Health Care,Health Care,85332680704.0,399235889.0,SP500
-MDLZ,Mondelez International,US,Consumer Staples,Consumer Staples,78863081472.0,1276308057.0,SP500
-MPWR,Monolithic Power Systems,US,Information Technology,Information Technology,64830918656.0,49143000.0,SP500
-MNST,Monster Beverage,US,Consumer Staples,Consumer Staples,85728100352.0,1959051764.0,SP500
+MRNA,Moderna,US,Health Care,Health Care,85332680704.0,399235889.0,SP500+NDX
+MDLZ,Mondelez International,US,Consumer Staples,Consumer Staples,78863081472.0,1276308057.0,SP500+NDX
+MPWR,Monolithic Power Systems,US,Information Technology,Information Technology,64830918656.0,49143000.0,SP500+NDX
+MNST,Monster Beverage,US,Consumer Staples,Consumer Staples,85728100352.0,1959051764.0,SP500+NDX
 MCO,Moody's Corporation,US,Financials,Financials,81481654272.0,173180984.0,SP500
 MS,Morgan Stanley,US,Financials,Financials,298439016448.0,1570566292.0,SP500
 MOS,Mosaic Company (The),US,Materials,Materials,5992333312.0,317895646.0,SP500
@@ -327,7 +327,7 @@ MSI,Motorola Solutions,US,Information Technology,Information Technology,73864839
 MSCI,MSCI,US,Financials,Financials,41294327808.0,72700000.0,SP500
 NDAQ,"Nasdaq, Inc.",US,Financials,Financials,52705976320.0,558977372.0,SP500
 NTAP,NetApp,US,Information Technology,Information Technology,46979497984.0,196419005.0,SP500
-NFLX,Netflix,US,Communication Services,Communication Services,294015762432.0,4163939676.0,SP500
+NFLX,Netflix,US,Communication Services,Communication Services,294015762432.0,4163939676.0,SP500+NDX
 NEM,Newmont,US,Materials,Materials,123440054272.0,1053692271.0,SP500
 NWSA,News Corp (Class A),US,Communication Services,Communication Services,15830354944.0,359393675.0,SP500
 NWS,News Corp (Class B),US,Communication Services,Communication Services,17446799360.0,179420353.0,SP500
@@ -341,26 +341,26 @@ NOC,Northrop Grumman,US,Industrials,Industrials,68900569088.0,142063026.0,SP500
 NCLH,Norwegian Cruise Line Holdings,US,Consumer Discretionary,Consumer Discretionary,7048533504.0,459187846.0,SP500
 NRG,NRG Energy,US,Utilities,Utilities,22360088576.0,210210483.0,SP500
 NUE,Nucor,US,Materials,Materials,57134104576.0,226875676.0,SP500
-NVDA,Nvidia,US,Information Technology,Information Technology,5464948998144.0,24147000000.0,SP500
+NVDA,Nvidia,US,Information Technology,Information Technology,5464948998144.0,24147000000.0,SP500+NDX
 NVR,"NVR, Inc.",US,Consumer Discretionary,Consumer Discretionary,15399272448.0,2678153.0,SP500
-NXPI,NXP Semiconductors,US,Information Technology,Information Technology,56789897216.0,252164174.0,SP500
-ORLY,O'Reilly Automotive,US,Consumer Discretionary,Consumer Discretionary,70096453632.0,808960792.0,SP500
+NXPI,NXP Semiconductors,US,Information Technology,Information Technology,56789897216.0,252164174.0,SP500+NDX
+ORLY,O'Reilly Automotive,US,Consumer Discretionary,Consumer Discretionary,70096453632.0,808960792.0,SP500+NDX
 OXY,Occidental Petroleum,US,Energy,Energy,61107834880.0,999637371.0,SP500
-ODFL,Old Dominion,US,Industrials,Industrials,37831512064.0,207968283.0,SP500
+ODFL,Old Dominion,US,Industrials,Industrials,37831512064.0,207968283.0,SP500+NDX
 OMC,Omnicom Group,US,Communication Services,Communication Services,21143842816.0,274345967.0,SP500
 ON,ON Semiconductor,US,Information Technology,Information Technology,29588215808.0,389318613.0,SP500
 OKE,Oneok,US,Energy,Energy,58010255360.0,630409203.0,SP500
 ORCL,Oracle Corporation,US,Information Technology,Information Technology,416497926144.0,3031501149.0,SP500
 OTIS,Otis Worldwide,US,Industrials,Industrials,25409679360.0,380669339.0,SP500
-PCAR,Paccar,US,Industrials,Industrials,56915841024.0,526364953.0,SP500
+PCAR,Paccar,US,Industrials,Industrials,56915841024.0,526364953.0,SP500+NDX
 PKG,Packaging Corporation of America,US,Materials,Materials,20298375168.0,89098299.0,SP500
-PLTR,Palantir Technologies,US,Information Technology,Information Technology,502239199232.0,2300713329.0,SP500
-PANW,Palo Alto Networks,US,Information Technology,Information Technology,330332930048.0,818000000.0,SP500
+PLTR,Palantir Technologies,US,Information Technology,Information Technology,502239199232.0,2300713329.0,SP500+NDX
+PANW,Palo Alto Networks,US,Information Technology,Information Technology,330332930048.0,818000000.0,SP500+NDX
 PH,Parker Hannifin,US,Industrials,Industrials,120675713024.0,126112415.0,SP500
-PAYX,Paychex,US,Industrials,Industrials,37249798144.0,355980473.0,SP500
-PYPL,PayPal,US,Financials,Financials,47948578816.0,855460874.0,SP500
+PAYX,Paychex,US,Industrials,Industrials,37249798144.0,355980473.0,SP500+NDX
+PYPL,PayPal,US,Financials,Financials,47948578816.0,855460874.0,SP500+NDX
 PNR,Pentair,US,Industrials,Industrials,8351868416.0,159600000.0,SP500
-PEP,PepsiCo,US,Consumer Staples,Consumer Staples,172632047616.0,1362741092.0,SP500
+PEP,PepsiCo,US,Consumer Staples,Consumer Staples,172632047616.0,1362741092.0,SP500+NDX
 PFE,Pfizer,US,Health Care,Health Care,161870725120.0,5699673589.0,SP500
 PCG,PG&E Corporation,US,Utilities,Utilities,39511150592.0,2202366906.0,SP500
 PM,Philip Morris International,US,Consumer Staples,Consumer Staples,314839891968.0,1558613439.0,SP500
@@ -379,7 +379,7 @@ PTC,PTC Inc.,US,Information Technology,Information Technology,21117018112.0,1086
 PSA,Public Storage,US,Real Estate,Real Estate,53977890816.0,186852295.0,SP500
 PHM,PulteGroup,US,Consumer Discretionary,Consumer Discretionary,21170653184.0,190486353.0,SP500
 PWR,Quanta Services,US,Industrials,Industrials,104457084928.0,150343393.0,SP500
-QCOM,Qualcomm,US,Information Technology,Information Technology,186263240704.0,1067839507.0,SP500
+QCOM,Qualcomm,US,Information Technology,Information Technology,186263240704.0,1067839507.0,SP500+NDX
 DGX,Quest Diagnostics,US,Health Care,Health Care,25676154880.0,110373360.0,SP500
 Q,Qnity Electronics,US,Information Technology,Information Technology,25776584704.0,209208543.0,SP500
 RL,Ralph Lauren Corporation,US,Consumer Discretionary,Consumer Discretionary,22238474240.0,37700963.0,SP500
@@ -388,7 +388,7 @@ RDDT,Reddit,US,Communication Services,Communication Services,30769973248.0,14610
 RTX,RTX Corporation,US,Industrials,Industrials,251572535296.0,1347758144.0,SP500
 O,Realty Income,US,Real Estate,Real Estate,51758129152.0,946218033.0,SP500
 REG,Regency Centers,US,Real Estate,Real Estate,13406811136.0,183120547.0,SP500
-REGN,Regeneron Pharmaceuticals,US,Health Care,Health Care,78535098368.0,101137842.0,SP500
+REGN,Regeneron Pharmaceuticals,US,Health Care,Health Care,78535098368.0,101137842.0,SP500+NDX
 RF,Regions Financial Corporation,US,Financials,Financials,23317311488.0,851929506.0,SP500
 RSG,Republic Services,US,Industrials,Industrials,67290304512.0,306212978.0,SP500
 RMD,ResMed|,US,Health Care,Health Care,32993968128.0,140639243.0,SP500
@@ -396,15 +396,15 @@ RVTY,Revvity,US,Health Care,Health Care,17363959808.0,111586401.0,SP500
 HOOD,Robinhood Markets,US,Financials,Financials,98197774336.0,790630234.0,SP500
 ROK,Rockwell Automation,US,Industrials,Industrials,48289558528.0,111273953.0,SP500
 ROL,"Rollins, Inc.",US,Industrials,Industrials,15430333440.0,481145404.0,SP500
-ROP,Roper Technologies,US,Information Technology,Information Technology,36328267776.0,98900874.0,SP500
-ROST,Ross Stores,US,Consumer Discretionary,Consumer Discretionary,72445198336.0,320781076.0,SP500
+ROP,Roper Technologies,US,Information Technology,Information Technology,36328267776.0,98900874.0,SP500+NDX
+ROST,Ross Stores,US,Consumer Discretionary,Consumer Discretionary,72445198336.0,320781076.0,SP500+NDX
 RCL,Royal Caribbean Group,US,Consumer Discretionary,Consumer Discretionary,75065778176.0,267452084.0,SP500
 SPGI,S&P Global,US,Financials,Financials,121513615360.0,294800000.0,SP500
 CRM,Salesforce,US,Information Technology,Information Technology,192516161536.0,823000000.0,SP500
-SNDK,Sandisk,US,Information Technology,Information Technology,214960177152.0,144527564.0,SP500
+SNDK,Sandisk,US,Information Technology,Information Technology,214960177152.0,144527564.0,SP500+NDX
 SBAC,SBA Communications,US,Real Estate,Real Estate,19549917184.0,106088110.0,SP500
 SLB,Schlumberger,US,Energy,Energy,72381669376.0,1484143231.0,SP500
-STX,Seagate Technology,US,Information Technology,Information Technology,171283775488.0,227393014.0,SP500
+STX,Seagate Technology,US,Information Technology,Information Technology,171283775488.0,227393014.0,SP500+NDX
 SRE,Sempra,US,Utilities,Utilities,53541359616.0,653900348.0,SP500
 NOW,ServiceNow,US,Information Technology,Information Technology,145071521792.0,1033862000.0,SP500
 SHW,Sherwin-Williams,US,Materials,Materials,77733584896.0,242758151.0,SP500
@@ -418,26 +418,26 @@ SOLV,Solventum,US,Health Care,Health Care,14521785344.0,170223729.0,SP500
 SO,Southern Company,US,Utilities,Utilities,100127596544.0,1150362966.0,SP500
 LUV,Southwest Airlines,US,Industrials,Industrials,19940124672.0,489208201.0,SP500
 SWK,Stanley Black & Decker,US,Industrials,Industrials,13387625472.0,151016641.0,SP500
-SBUX,Starbucks,US,Consumer Discretionary,Consumer Discretionary,105204908032.0,1140000000.0,SP500
+SBUX,Starbucks,US,Consumer Discretionary,Consumer Discretionary,105204908032.0,1140000000.0,SP500+NDX
 STT,State Street Corporation,US,Financials,Financials,48053575680.0,274701765.0,SP500
 STLD,Steel Dynamics,US,Materials,Materials,34275481600.0,143328088.0,SP500
 STE,Steris,US,Health Care,Health Care,21350574080.0,97500110.0,SP500
 SYK,Stryker Corporation,US,Health Care,Health Care,108397748224.0,383573046.0,SP500
 SMCI,Supermicro,US,Information Technology,Information Technology,26265475072.0,656965384.0,SP500
 SYF,Synchrony Financial,US,Financials,Financials,23953803264.0,325370840.0,SP500
-SNPS,Synopsys,US,Information Technology,Information Technology,96299327488.0,191636646.0,SP500
+SNPS,Synopsys,US,Information Technology,Information Technology,96299327488.0,191636646.0,SP500+NDX
 SYY,Sysco,US,Consumer Staples,Consumer Staples,38713626624.0,491913960.0,SP500
-TMUS,T-Mobile US,US,Communication Services,Communication Services,162906636288.0,1072671613.0,SP500
+TMUS,T-Mobile US,US,Communication Services,Communication Services,162906636288.0,1072671613.0,SP500+NDX
 TROW,T. Rowe Price,US,Financials,Financials,22182715392.0,213315850.0,SP500
-TTWO,Take-Two Interactive,US,Communication Services,Communication Services,39045259264.0,186980443.0,SP500
+TTWO,Take-Two Interactive,US,Communication Services,Communication Services,39045259264.0,186980443.0,SP500+NDX
 TPR,"Tapestry, Inc.",US,Consumer Discretionary,Consumer Discretionary,23260592128.0,198435342.0,SP500
 TRGP,Targa Resources,US,Energy,Energy,62300790784.0,214431021.0,SP500
 TGT,Target Corporation,US,Consumer Staples,Consumer Staples,69789065216.0,454296736.0,SP500
 TEL,TE Connectivity,US,Information Technology,Information Technology,62905430016.0,289513228.0,SP500
 TDY,Teledyne Technologies,US,Information Technology,Information Technology,28446619648.0,46355673.0,SP500
-TER,Teradyne,US,Information Technology,Information Technology,60011397120.0,156340750.0,SP500
-TSLA,"Tesla, Inc.",US,Consumer Discretionary,Consumer Discretionary,1493047443456.0,3949547394.0,SP500
-TXN,Texas Instruments,US,Information Technology,Information Technology,257298399232.0,913247686.0,SP500
+TER,Teradyne,US,Information Technology,Information Technology,60011397120.0,156340750.0,SP500+NDX
+TSLA,"Tesla, Inc.",US,Consumer Discretionary,Consumer Discretionary,1493047443456.0,3949547394.0,SP500+NDX
+TXN,Texas Instruments,US,Information Technology,Information Technology,257298399232.0,913247686.0,SP500+NDX
 TPL,Texas Pacific Land Corporation,US,Energy,Energy,25197830144.0,68974683.0,SP500
 TXT,Textron,US,Industrials,Industrials,13033167872.0,171986917.0,SP500
 TMO,Thermo Fisher Scientific,US,Health Care,Health Care,244861452288.0,369747286.0,SP500
@@ -469,7 +469,7 @@ VLTO,Veralto,US,Industrials,Industrials,23940505600.0,243793344.0,SP500
 VRSN,Verisign,US,Information Technology,Information Technology,27364081664.0,90400000.0,SP500
 VRSK,Verisk Analytics,US,Industrials,Industrials,23101392896.0,130156012.0,SP500
 VZ,Verizon,US,Communication Services,Communication Services,177741283328.0,4154775202.0,SP500
-VRTX,Vertex Pharmaceuticals,US,Health Care,Health Care,128504692736.0,253460924.0,SP500
+VRTX,Vertex Pharmaceuticals,US,Health Care,Health Care,128504692736.0,253460924.0,SP500+NDX
 VRT,Vertiv,US,Industrials,Industrials,92150767616.0,384988173.0,SP500
 VTRS,Viatris,US,Health Care,Health Care,20146284544.0,1148590864.0,SP500
 VICI,Vici Properties,US,Real Estate,Real Estate,25357815808.0,1101077562.0,SP500
@@ -481,7 +481,7 @@ VYLR,Vylor,US,Consumer Staples,Consumer Staples,50641616896.0,667302930.0,SP500
 WRB,W. R. Berkley Corporation,US,Financials,Financials,27062487040.0,371227529.0,SP500
 GWW,W. W. Grainger,US,Industrials,Industrials,61548216320.0,47100942.0,SP500
 WAB,Wabtec,US,Industrials,Industrials,48269651968.0,168910851.0,SP500
-WMT,Walmart,US,Consumer Staples,Consumer Staples,899899588608.0,7958079155.0,SP500
+WMT,Walmart,US,Consumer Staples,Consumer Staples,899899588608.0,7958079155.0,SP500+NDX
 DIS,Walt Disney Company (The),US,Communication Services,Communication Services,187328249856.0,1726686902.0,SP500
 WM,Waste Management,US,Industrials,Industrials,84395868160.0,399715184.0,SP500
 WAT,Waters Corporation,US,Health Care,Health Care,42426109952.0,98185855.0,SP500
@@ -489,16 +489,31 @@ WEC,WEC Energy Group,US,Utilities,Utilities,34184859648.0,325849383.0,SP500
 WFC,Wells Fargo,US,Financials,Financials,251959607296.0,3023999336.0,SP500
 WELL,Welltower,US,Real Estate,Real Estate,165940527104.0,720572011.0,SP500
 WST,West Pharmaceutical Services,US,Health Care,Health Care,25870129152.0,70375762.0,SP500
-WDC,Western Digital,US,Information Technology,Information Technology,144840638464.0,374323269.0,SP500
+WDC,Western Digital,US,Information Technology,Information Technology,144840638464.0,374323269.0,SP500+NDX
 WY,Weyerhaeuser,US,Real Estate,Real Estate,13650740224.0,720736000.0,SP500
 WSM,"Williams-Sonoma, Inc.",US,Consumer Discretionary,Consumer Discretionary,28132734976.0,117779173.0,SP500
 WMB,Williams Companies,US,Energy,Energy,90722328576.0,1223167472.0,SP500
 WTW,Willis Towers Watson,US,Financials,Financials,27715770368.0,92871937.0,SP500
-WDAY,"Workday, Inc.",US,Information Technology,Information Technology,45368250368.0,196000000.0,SP500
+WDAY,"Workday, Inc.",US,Information Technology,Information Technology,45368250368.0,196000000.0,SP500+NDX
 WYNN,Wynn Resorts,US,Consumer Discretionary,Consumer Discretionary,7718922752.0,102973891.0,SP500
-XEL,Xcel Energy,US,Utilities,Utilities,46329126912.0,624634306.0,SP500
+XEL,Xcel Energy,US,Utilities,Utilities,46329126912.0,624634306.0,SP500+NDX
 XYL,Xylem Inc.,US,Industrials,Industrials,23953412096.0,233486812.0,SP500
 YUM,Yum! Brands,US,Consumer Discretionary,Consumer Discretionary,40048234496.0,272901085.0,SP500
 ZBRA,Zebra Technologies,US,Information Technology,Information Technology,18362212352.0,47310660.0,SP500
 ZBH,Zimmer Biomet,US,Health Care,Health Care,17580292096.0,190737689.0,SP500
 ZTS,Zoetis,US,Health Care,Health Care,31260366848.0,413223602.0,SP500
+ALNY,Alnylam Pharmaceuticals,US,,Health Care,29949157376.0,133809118.0,NDX
+ARM,Arm Holdings,US,,Information Technology,272595959808.0,1067998569.0,NDX
+ASML,ASML Holding,US,,Information Technology,672267173888.0,384100000.0,NDX
+ALAB,Astera Labs,US,,Information Technology,56228253696.0,173485104.0,NDX
+CCEP,Coca-Cola Europacific Partners,US,,Consumer Staples,46309482496.0,439452319.0,NDX
+CRWV,CoreWeave,US,,Information Technology,42915057664.0,458871690.0,NDX
+FER,Ferrovial,US,,Industrials,36392689664.0,719792155.0,NDX
+MELI,Mercado Libre,US,,Consumer Discretionary,95109226496.0,50696802.0,NDX
+MSTR,MicroStrategy,US,,Information Technology,60881272832.0,379110575.0,NDX
+NBIS,Nebius Group,US,,Communication Services,56235974656.0,238400165.0,NDX
+PDD,PDD Holdings,US,,Consumer Discretionary,116661575680.0,1423396462.0,NDX
+RKLB,Rocket Lab,US,,Industrials,42015694848.0,598459739.0,NDX
+SHOP,Shopify,US,,Information Technology,229062000640.0,1219581025.0,NDX
+SPCX,SpaceX,US,,Industrials,2154166484992.0,7696293669.0,NDX
+TRI,Thomson Reuters,US,,Industrials,45552050176.0,433251382.0,NDX
