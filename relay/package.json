@@ -1,0 +1,6 @@
+{
+  "name": "mrw-dispatch-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Starts the Market Rotation Watch GitHub Actions workflows on request, with a time-window and dedup guard."
+}
