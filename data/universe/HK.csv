@@ -84,6 +84,16 @@ ticker,name,market,sector_local,sector,mcap_local,shares,source_index
 9988.HK,Alibaba Group,HK,Internet Retail,Consumer Discretionary,2119558758400.0,19901959514.0,HSI
 9992.HK,Pop Mart,HK,Leisure,Consumer Discretionary,197394694144.0,1322134510.0,HSI
 9999.HK,NetEase,HK,Electronic Gaming & Multimedia,Communication Services,625282711552.0,3201652151.0,HSI
+1288.HK,Agricultural Bank of China,HK,Banks - Diversified,Financials,2428882386944.0,30738823096.0,HSCEI
+1658.HK,Postal Savings Bank of China,HK,Banks - Regional,Financials,674333720576.0,19856167000.0,HSCEI
+1801.HK,Innovent Biologics,HK,Biotechnology,Health Care,159302041600.0,1743864650.0,HSCEI
+2601.HK,China Pacific Insurance Company,HK,Insurance - Life,Financials,252245360640.0,2775300000.0,HSCEI
+3328.HK,Bank of Communications,HK,Banks - Diversified,Financials,759928586240.0,35011862630.0,HSCEI
+0384.HK,China Gas,HK,Utilities - Regulated Gas,Utilities,27022837760.0,5448152741.0,HSCEI
+6186.HK,China Feihe,HK,Packaged Foods,Consumer Staples,22635698176.0,8807664704.0,HSCEI
+6098.HK,CG Services,HK,Real Estate Services,Real Estate,16153872384.0,3296708519.0,HSCEI
+9626.HK,Bilibili,HK,Internet Content & Information,Communication Services,48566571008.0,332230191.0,HSCEI
+2007.HK,Country Garden,HK,Real Estate - Development,Real Estate,6606272000.0,46852993436.0,HSCEI
 9868.HK,XPENG-W,HK,Auto Manufacturers,Consumer Discretionary,72039841792.0,1567245202.0,HSTECH_static
 9866.HK,NIO-SW,HK,Auto Manufacturers,Consumer Discretionary,66758139904.0,2357167022.0,HSTECH_static
 1347.HK,HUA HONG GRACE,HK,Semiconductors,Information Technology,198463979520.0,1928494794.0,HSTECH_static
@@ -94,7 +104,6 @@ ticker,name,market,sector_local,sector,mcap_local,shares,source_index
 9698.HK,GDS-SW,HK,Information Technology Services,Information Technology,47898263552.0,1559430567.0,HSTECH_static
 6060.HK,ZA ONLINE,HK,Insurance - Property & Casualty,Financials,15761424384.0,1634812900.0,HSTECH_static
 0780.HK,TONGCHENGTRAVEL,HK,Travel Services,Consumer Discretionary,23025149952.0,2354309962.0,HSTECH_static
-9626.HK,BILIBILI-W,HK,Internet Content & Information,Communication Services,48566571008.0,332230191.0,HSTECH_static
 0772.HK,CHINA LIT,HK,Internet Content & Information,Communication Services,21815283712.0,1009032517.0,HSTECH_static
 6969.HK,SMOORE INTL,HK,Tobacco,Consumer Staples,48511791104.0,6195631079.0,HSTECH_static
 2018.HK,AAC TECH,HK,Communication Equipment,Information Technology,40825131008.0,1129013595.0,HSTECH_static

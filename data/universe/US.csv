@@ -197,7 +197,7 @@ FIS,Fidelity National Information Services,US,Financials,Financials,17668083712.
 FITB,Fifth Third Bancorp,US,Financials,Financials,46088278016.0,906892564.0,SP500
 FSLR,First Solar,US,Information Technology,Information Technology,19314470912.0,107469788.0,SP500
 FE,FirstEnergy,US,Utilities,Utilities,26247108608.0,578639932.0,SP500
-FISV,Fiserv,US,Financials,Financials,24812234752.0,531766721.0,SP500
+FISV,Fiserv,US,Financials,Financials,26598971392.0,531766721.0,SP500
 FLEX,Flex Ltd.,US,Information Technology,Information Technology,43315544064.0,369460443.0,SP500
 F,Ford Motor Company,US,Consumer Discretionary,Consumer Discretionary,47851151360.0,3916743591.0,SP500
 FTNT,Fortinet,US,Information Technology,Information Technology,141562707968.0,733713653.0,SP500+NDX
@@ -374,24 +374,23 @@ PG,Procter & Gamble,US,Consumer Staples,Consumer Staples,355833413632.0,23226723
 PGR,Progressive Corporation,US,Financials,Financials,127850512384.0,580400000.0,SP500
 PLD,Prologis,US,Real Estate,Real Estate,128772947968.0,950333372.0,SP500
 PRU,Prudential Financial,US,Financials,Financials,39119548416.0,345000000.0,SP500
-PEG,Public Service Enterprise Group,US,Utilities,Utilities,35268202496.0,498420030.0,SP500
 PTC,PTC Inc.,US,Information Technology,Information Technology,21117018112.0,108632228.0,SP500
+PEG,Public Service Enterprise Group,US,Utilities,Utilities,35268202496.0,498420030.0,SP500
 PSA,Public Storage,US,Real Estate,Real Estate,53977890816.0,186852295.0,SP500
 PHM,PulteGroup,US,Consumer Discretionary,Consumer Discretionary,21170653184.0,190486353.0,SP500
-PWR,Quanta Services,US,Industrials,Industrials,104457084928.0,150343393.0,SP500
-QCOM,Qualcomm,US,Information Technology,Information Technology,186263240704.0,1067839507.0,SP500+NDX
-DGX,Quest Diagnostics,US,Health Care,Health Care,25676154880.0,110373360.0,SP500
 Q,Qnity Electronics,US,Information Technology,Information Technology,25776584704.0,209208543.0,SP500
+QCOM,Qualcomm,US,Information Technology,Information Technology,186263240704.0,1067839507.0,SP500+NDX
+PWR,Quanta Services,US,Industrials,Industrials,104457084928.0,150343393.0,SP500
+DGX,Quest Diagnostics,US,Health Care,Health Care,25676154880.0,110373360.0,SP500
 RL,Ralph Lauren Corporation,US,Consumer Discretionary,Consumer Discretionary,22238474240.0,37700963.0,SP500
 RJF,Raymond James Financial,US,Financials,Financials,30476664832.0,192100000.0,SP500
 RDDT,Reddit,US,Communication Services,Communication Services,30769973248.0,146103200.0,SP500
-RTX,RTX Corporation,US,Industrials,Industrials,251572535296.0,1347758144.0,SP500
 O,Realty Income,US,Real Estate,Real Estate,51758129152.0,946218033.0,SP500
 REG,Regency Centers,US,Real Estate,Real Estate,13406811136.0,183120547.0,SP500
 REGN,Regeneron Pharmaceuticals,US,Health Care,Health Care,78535098368.0,101137842.0,SP500+NDX
 RF,Regions Financial Corporation,US,Financials,Financials,23317311488.0,851929506.0,SP500
 RSG,Republic Services,US,Industrials,Industrials,67290304512.0,306212978.0,SP500
-RMD,ResMed|,US,Health Care,Health Care,32993968128.0,140639243.0,SP500
+RMD,ResMed,US,Health Care,Health Care,32993968128.0,140639243.0,SP500
 RVTY,Revvity,US,Health Care,Health Care,17363959808.0,111586401.0,SP500
 HOOD,Robinhood Markets,US,Financials,Financials,98197774336.0,790630234.0,SP500
 ROK,Rockwell Automation,US,Industrials,Industrials,48289558528.0,111273953.0,SP500
@@ -399,6 +398,7 @@ ROL,"Rollins, Inc.",US,Industrials,Industrials,15430333440.0,481145404.0,SP500
 ROP,Roper Technologies,US,Information Technology,Information Technology,36328267776.0,98900874.0,SP500+NDX
 ROST,Ross Stores,US,Consumer Discretionary,Consumer Discretionary,72445198336.0,320781076.0,SP500+NDX
 RCL,Royal Caribbean Group,US,Consumer Discretionary,Consumer Discretionary,75065778176.0,267452084.0,SP500
+RTX,RTX Corporation,US,Industrials,Industrials,251572535296.0,1347758144.0,SP500
 SPGI,S&P Global,US,Financials,Financials,121513615360.0,294800000.0,SP500
 CRM,Salesforce,US,Information Technology,Information Technology,192516161536.0,823000000.0,SP500
 SNDK,Sandisk,US,Information Technology,Information Technology,214960177152.0,144527564.0,SP500+NDX
@@ -409,7 +409,7 @@ SRE,Sempra,US,Utilities,Utilities,53541359616.0,653900348.0,SP500
 NOW,ServiceNow,US,Information Technology,Information Technology,145071521792.0,1033862000.0,SP500
 SHW,Sherwin-Williams,US,Materials,Materials,77733584896.0,242758151.0,SP500
 SPG,Simon Property Group,US,Real Estate,Real Estate,76459966464.0,323551515.0,SP500
-SKYD,Skydance Corporation,US,Communication Services,Communication Services,46186348544.0,5010678000.0,SP500
+SKYD,Skydance,US,Communication Services,Communication Services,46186348544.0,5010678000.0,SP500
 SWKS,Skyworks Solutions,US,Information Technology,Information Technology,17566865408.0,235165549.0,SP500
 SJM,J.M. Smucker Company (The),US,Consumer Staples,Consumer Staples,12820918272.0,106823183.0,SP500
 SW,Smurfit Westrock,US,Materials,Materials,21542156288.0,524522908.0,SP500
